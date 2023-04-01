@@ -39,6 +39,7 @@ body {
   font-family: namefont;
   font-weight: 200;
   color: #696969;
+  text-decoration: none;
   cursor: pointer;
   user-select: none;
 }
@@ -155,6 +156,7 @@ body {
   padding-right: 5%;
   text-align: left;
   line-height: 2.15;
+  user-select: none;
 }
 
 .blogPostContentH2 {

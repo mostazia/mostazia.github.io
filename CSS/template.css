@@ -39,6 +39,7 @@ body {
   font-family: namefont;
   font-weight: 200;
   color: #696969;
+  text-decoration: none;
   cursor: pointer;
   user-select: none;
 }
