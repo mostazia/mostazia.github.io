@@ -14,6 +14,7 @@
       href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
       type="image/x-icon"
     />
+    <script type="text/javascript" src="JS/footer.js"></script>
     <script>
       let unselectedProject = 1;
       let selectedProject = 0;
@@ -789,10 +790,13 @@
         </div>
         <div
           class="taskbarText"
+          id="lastUp"
           style="justify-content: right; margin-right: 2.5%; margin-left: auto"
-        >
-          Last Updated 4/1/2023
-        </div>
+        ></div>
+        <script type="text/javascript">
+          document.getElementById("lastUp").innerHTML =
+            "Last updated " + lastUpdated;
+        </script>
       </div>
     </div>
   </body>
