@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: namefont;
+  src: url("../Fonts/namefont.ttf");
+}
+
+@font-face {
+  font-family: codefont;
+  src: url(../Fonts/CascadiaCode.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fde1e0;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+#navbar {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#webpageName {
+  margin-top: min(1vh, calc(15vw / 9.5));
+  margin-left: 2vw;
+  font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
+  font-family: namefont;
+  font-weight: 200;
+  color: #696969;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu {
+  width: 50%;
+  height: 7vh;
+  margin-right: 2vw;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.menubutton {
+  font-family: "Urbanist", sans-serif;
+  font-size: min(2.6125 vh, 3.3vw);
+  font-weight: 400;
+  color: #696969;
+  height: min(6vh);
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.menubutton:hover {
+  color: #06617a;
+  font-weight: 500;
+}
+
+#homebody {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#helloStrip {
+  width: 100%;
+  min-height: calc(100vh - 15vw);
+  box-sizing: border-box;
+  display: flex;
+}
+
+#helloStripBox1 {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome {
+  margin-left: 5%;
+  margin-top: 20%;
+  width: 90%;
+  color: #8c0461;
+  font-family: namefont;
+  font-size: min(11.3125vh, 15.625vw);
+  font-weight: 600;
+}
+
+#introduction {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 90%;
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-size: min(3.62vh, 5vw);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+#socials {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: max(17.5vw, 25vh);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialIcon {
+  height: min(5.43vh, 7.5vw);
+  aspect-ratio: 1;
+}
+
+#helloStripBox2 {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#helloTerminal {
+  min-height: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1;
+  background-image: url("../Images/HomeTerminal.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#helloTerminalText {
+  z-index: 5;
+  position: absolute;
+  min-width: min(calc(90.5vh * 0.94), 47%);
+  aspect-ratio: 1;
+  font-family: codefont;
+  font-weight: 300;
+  color: white;
+  cursor: text;
+  box-sizing: content-box;
+  user-select: none;
+}
+
+.helloTerminalCursor {
+  padding-left: -2.5%;
+  opacity: 0;
+  animation-name: TerminalCursorAnim;
+  animation-delay: 5s;
+  animation-duration: 1s;
+  animation-iteration-count: 4;
+}
+
+#helloTerminalMenu {
+  margin-top: 1%;
+  margin-left: 6%;
+  width: 85%;
+  aspect-ratio: 12;
+  display: flex;
+  justify-content: space-between;
+}
+
+.helloTerminalButton {
+  height: 100%;
+  background: #fde1e0;
+  border-radius: 1vh;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  display: flex;
+  align-items: center;
+  color: #06617a;
+  font-family: "codefont";
+  font-size: min(calc(90.5vh * 0.47 * (1 / 15)), calc(47vw * 0.5 * (1 / 15)));
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.helloTerminalButton:hover {
+  background: #dbf6fd;
+}
+
+#aboutStrip {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#aboutImageStrip {
+  box-sizing: border-box;
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#aboutPreviewImage {
+  width: 80%;
+  background-image: url("../Images/StacyAboutMeImage.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#aboutTextStrip {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#aboutLanguagesDisplayDT {
+  display: none;
+}
+#aboutLanguagesDisplayMB {
+  display: inline;
+}
+
+#projectsStrip {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projectsGalleryStrip {
+  margin-top: 1.5%;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#projectsGalleryWindow {
+  /* aspect-ratio = 4750/3000 */
+  height: 97.5%;
+  aspect-ratio: calc(4750 / 3000);
+  background-image: url("../Images/BrowserWindowProjects.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+#projectsGalleryLayer {
+  box-sizing: border-box;
+  width: calc(97.5vh * (4750 / 3000));
+  aspect-ratio: calc(4750 / 3000);
+  position: absolute;
+  z-index: 2;
+  padding-top: 4.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projectsGalleryTabs {
+  width: 100%;
+  aspect-ratio: 35;
+  background: #bfbfbf;
+  display: flex;
+}
+
+.projectGallerySingleTab {
+  width: 25%;
+  /* background: #dfdfdf; */
+  height: 100%;
+  font-family: "Urbanist", sans-serif;
+  color: #696969;
+  font-size: calc((97.5vh * (4750 / 3000) / 70));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projectGalleryDisplay {
+  width: 100%;
+  height: calc(95% - (97.5vh * (4750 / 3000) / 35));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-y: scroll;
+  overflow: overlay;
+}
+
+.projectGalleryDisplayTextContainer {
+  width: 50%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.projectGalleryImagesContainer {
+  width: 50%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.projectGalleryDisplay::-webkit-scrollbar-thumb {
+  background: #696969;
+}
+
+.projectGalleryDisplayTitle {
+  margin-top: 15vh;
+  font-family: codefont;
+  font-size: min(calc(0.6 * 11.3125vh), calc(0.6 * 15.625vw));
+  font-weight: 500;
+  user-select: none;
+  text-decoration: none;
+}
+
+.projectGalleryDisplayDescription {
+  max-width: 85%;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  text-align: center;
+  color: #696969;
+  font-family: codefont;
+  font-size: min(calc(0.7 * 3.077vh), calc(0.7 * 4.25vw));
+  font-weight: 300;
+  line-height: 1.75;
+  user-select: none;
+}
+
+#projectGalleryMenu {
+  margin-top: 1vh;
+  width: 10%;
+  aspect-ratio: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.projectGalleryDot {
+  height: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #696969;
+}
+
+#blogStrip {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blogPreviewsStrip {
+  margin-top: 1.5%;
+  min-height: 50vh;
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.blogPreviewWindow {
+  height: 45vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  aspect-ratio: 1;
+  background: transparent;
+  cursor: pointer;
+}
+
+.blogPreviewTitle {
+  font-size: min(3.077vh, 4.25vw);
+  font-family: codefont;
+  font-weight: 300;
+  color: #06617a;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.blogPreviewDescription {
+  font-size: min(calc(0.75 * 3.077vh), calc(0.75 * 4.25vw));
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #696969;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.blogPreviewDateReadmore {
+  height: 4vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 1vh;
+}
+
+.blogPreviewDate {
+  font-size: min(calc(0.7 * 3.077vh), calc(0.7 * 4.25vw));
+  font-family: codefont;
+  font-weight: 300;
+  color: #8c0461;
+  margin-left: 2vh;
+  margin-right: auto;
+}
+
+.blogPreviewRM {
+  font-size: min(calc(0.7 * 3.077vh), calc(0.7 * 4.25vw));
+  font-family: codefont;
+  font-weight: 400;
+  color: #8c0461;
+  margin-left: auto;
+  margin-right: 2vh;
+}
+
+.blogPreviewRM:hover {
+  color: #06617a;
+}
+
+.blogPreviewSheet {
+  width: 100%;
+  height: 43vh;
+  margin-top: 2vh;
+  background: rgba(250, 249, 245, 0.75);
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogPreviewWindow:hover {
+  background: url("../Images/BlogPreviewWindow.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#contactStrip {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#newConversationBox {
+  height: min(6vh, 8vw);
+  min-width: 50%;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+#newConversationIcon {
+  height: 90%;
+  aspect-ratio: 1;
+  background-image: url("../Images/PencilContactIcon.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#newConversationText {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  color: #8c0461;
+  /* font-family: "Urbanist", sans-serif; */
+  font-family: codefont;
+  font-size: min(3vh, 4vw);
+  font-weight: 300;
+  line-height: 1.75;
+  padding-left: 2%;
+}
+
+#taskbarStrip {
+  width: 100vw;
+  aspect-ratio: 26;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #06617a;
+  opacity: 0.8;
+}
+
+.taskbarText {
+  font-size: calc(0.5 * 100vw / 52);
+  font-family: codefont;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+#taskbarApps {
+  height: 90%;
+  aspect-ratio: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taskbarApp {
+  height: 80%;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+}
+.taskbarApp:hover {
+  transform: translateY(-10%);
+}
+
+.heading1 {
+  margin-left: 5%;
+  color: #8c0461;
+  font-family: namefont;
+  font-size: min(11.3125vh, 15.625vw);
+  font-weight: 600;
+}
+
+.paragraph1 {
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 87.5%;
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.moreButton {
+  height: min(5.5vh, 8vw);
+  aspect-ratio: 3;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: 4vh;
+  border: 0.25vh solid #8c0461;
+  border-radius: min(2vh, calc(5.5 / 2 * 8vw));
+  color: #8c0461;
+  font-family: "Urbanist", sans-serif;
+  font-size: min(2.75vh, 3.5vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.moreButton:hover {
+  border-color: #06617a;
+  color: #06617a;
+}
+
+@keyframes TerminalCursorAnim {
+  0% {
+    opacity: 100;
+  }
+  50% {
+    opacity: 100;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes printWelcomeAnim {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes welcomeAnim {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes printIntroAnim {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes introAnim {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes printLinksAnim {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes LinkedinAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes GithubAnim {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes TwitterAnim {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes EmailAnim {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes printGotoAnim {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes RemoveCursor {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06617a;
+  border-radius: 0.25vw;
+}
+
+@media screen and (min-width: 100vh) {
+  #helloStrip {
+    height: 90.5vh;
+  }
+  #helloStripBox2 {
+    display: flex;
+  }
+  #helloStripBox1 {
+    width: 50%;
+  }
+  #welcome {
+    margin-top: 8.75%;
+  }
+  #aboutStrip {
+    margin-top: 10vh;
+    flex-direction: row;
+  }
+  #aboutImageStrip {
+    width: 45%;
+    height: 100vh;
+  }
+  #aboutTextStrip {
+    width: 55%;
+    height: 100vh;
+  }
+  #aboutLanguagesDisplayDT {
+    display: flex;
+  }
+  #aboutLanguagesDisplayMB {
+    display: none;
+  }
+  #projectsStrip {
+    margin-top: 10vh;
+  }
+  #projectsGalleryStrip {
+    display: flex;
+  }
+  #blogStrip {
+    margin-top: 10vh;
+  }
+  #contactStrip {
+    margin-top: 10vh;
+  }
+  .paragraph1 {
+    font-size: 3.077vh;
+  }
+}
