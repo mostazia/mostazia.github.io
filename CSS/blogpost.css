@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: namefont;
+  src: url("../Fonts/namefont.ttf");
+}
+
+@font-face {
+  font-family: codefont;
+  src: url(../Fonts/CascadiaCode.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fde1e0;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+#navbar {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#webpageName {
+  margin-top: min(1vh, calc(15vw / 9.5));
+  margin-left: 2vw;
+  font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
+  font-family: namefont;
+  font-weight: 200;
+  color: #696969;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu {
+  width: 50%;
+  height: 7vh;
+  margin-right: 2vw;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.menubutton {
+  font-family: "Urbanist", sans-serif;
+  font-size: min(2.6125 vh, 3.3vw);
+  font-weight: 400;
+  color: #696969;
+  height: min(6vh);
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.menubutton:hover {
+  color: #06617a;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06617a;
+  border-radius: 0.25vw;
+}
+
+.blogpostBody {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogPostContainer {
+  width: 75vw;
+  min-height: 50vh;
+  margin-top: 2.5vh;
+  display: flex;
+}
+
+.blogPostWindow {
+  width: 50vw;
+}
+
+.blogPostWindowTopFrame {
+  width: 100%;
+  height: calc(50vw / 20);
+  background: url("../Images/BlogPostWindowTop.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 5%;
+}
+
+.blogPostWindowBottomFrame {
+  width: 100%;
+  height: calc(50vw / 20);
+  background: url("../Images/BlogPostWindowBottom.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5%;
+}
+
+.blogPostWindowBody {
+  background: #faf9f6;
+  width: 100%;
+  min-height: calc(50vw / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogPostTitle {
+  color: #06617a;
+  font-family: codefont;
+  font-weight: 600;
+  font-size: calc(50vw / 20);
+  width: 90%;
+  margin-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.blogPostContent {
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: calc(50vw / 40);
+  width: 90%;
+  margin-top: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+  line-height: 2.15;
+}
+
+.blogPostContentH2 {
+  font-weight: 600;
+  color: #8c0461;
+}
+
+.blogPostRightStrip {
+  width: 25%;
+  height: 100vh;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+.blogPostRightBox {
+  width: 100%;
+  margin-top: 2.5vw;
+}
+
+.blogPostRightTitle {
+  font-family: namefont;
+  font-size: calc(25vw / 9);
+  color: #8c0461;
+  font-weight: 500;
+  margin-bottom: 1vh;
+}
+
+.blogPostRightText {
+  font-family: "Urbanist", sans-serif;
+  color: #696969;
+  font-weight: 400;
+  font-size: calc(25vw / 20);
+  width: 100%;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.blogPostInfoTag {
+  display: inline;
+  height: calc(25vw / 20);
+  background: #dbf6fd;
+  font-family: codefont;
+  color: #06617a;
+  font-size: calc(25vw / 24);
+  font-weight: 300;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  margin-left: 0.5vw;
+  cursor: pointer;
+  border-radius: calc(25vw / 40);
+}
+
+.blogPostThankYou {
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 5vh;
+  font-family: namefont;
+  color: #8c0461;
+  font-size: calc(25vw / 8);
+  font-weight: 400;
+}
+
+#taskbarStrip {
+  width: 100vw;
+  aspect-ratio: 26;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #06617a;
+  opacity: 0.8;
+}
+
+.taskbarText {
+  font-size: calc(0.5 * 100vw / 52);
+  font-family: codefont;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+#taskbarApps {
+  height: 90%;
+  aspect-ratio: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taskbarApp {
+  height: 80%;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+}
+.taskbarApp:hover {
+  transform: translateY(-10%);
+}

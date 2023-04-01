@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: namefont;
+  src: url("../Fonts/namefont.ttf");
+}
+
+@font-face {
+  font-family: codefont;
+  src: url(../Fonts/CascadiaCode.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fde1e0;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+#navbar {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#webpageName {
+  margin-top: min(1vh, calc(15vw / 9.5));
+  margin-left: 2vw;
+  font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
+  font-family: namefont;
+  font-weight: 200;
+  color: #696969;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu {
+  width: 50%;
+  height: 7vh;
+  margin-right: 2vw;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.menubutton {
+  font-family: "Urbanist", sans-serif;
+  font-size: min(2.6125 vh, 3.3vw);
+  font-weight: 400;
+  color: #696969;
+  height: min(6vh);
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.menubutton:hover {
+  color: #06617a;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06617a;
+  border-radius: 0.25vw;
+}
+
+#taskbarStrip {
+  width: 100vw;
+  aspect-ratio: 26;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #06617a;
+  opacity: 0.8;
+}
+
+.taskbarText {
+  font-size: calc(0.5 * 100vw / 52);
+  font-family: codefont;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+#taskbarApps {
+  height: 90%;
+  aspect-ratio: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taskbarApp {
+  height: 80%;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+}
+.taskbarApp:hover {
+  transform: translateY(-10%);
+}
