@@ -14,6 +14,14 @@
       href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
       type="image/x-icon"
     />
+    <script>
+      const copyPostLink = () => {
+        navigator.clipboard.writeText(
+          "https://https://mostazia.github.io/blog/my-college-essays"
+        );
+        alert("Copied link to clipboard!");
+      };
+    </script>
   </head>
   <body>
     <div id="navbar">
@@ -23,9 +31,14 @@
         <div class="menubutton">Projects</div>
         <div class="menubutton">Blog</div>
         <div class="menubutton">Contact</div>
-        <div class="menubutton" style="color: #8c0461; font-weight: bold">
+        <a
+          href="../Stacy Resume.pdf"
+          target="_blank"
+          class="menubutton"
+          style="color: #8c0461; font-weight: bold"
+        >
           Resume
-        </div>
+        </a>
       </div>
     </div>
     <div class="blogpostBody">
@@ -237,7 +250,10 @@
             <div class="blogPostRightText">
               📝: Stacy Vazquez <br />
               📅: April 1, 2023 <br />
-              🔗: <a>/my-college-essays</a><br />
+              🔗:
+              <span style="cursor: pointer" onclick="copyPostLink()"
+                >/my-college-essays</span
+              ><br />
               🏷️:
               <span class="blogPostInfoTag">College Applications</span>
               <span class="blogPostInfoTag">High School</span>

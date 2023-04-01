@@ -63,6 +63,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 5%;
+  text-decoration: none;
   cursor: pointer;
 }
 
