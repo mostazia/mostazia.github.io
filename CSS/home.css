@@ -687,7 +687,6 @@ body {
   color: #8c0461;
   font-family: namefont;
   font-size: min(11.3125vh, 15.625vw);
-  font-weight: 600;
 }
 
 .paragraph1 {
@@ -927,6 +926,7 @@ body {
   }
   #welcome {
     margin-top: 8.75%;
+    font-weight: 600;
   }
   #aboutStrip {
     margin-top: 10vh;
@@ -994,6 +994,9 @@ body {
     justify-content: right;
     margin-right: 2.5%;
     margin-left: auto;
+  }
+  .heading1 {
+    font-weight: 600;
   }
   .paragraph1 {
     font-size: 3.077vh;
