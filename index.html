@@ -15,6 +15,24 @@
       type="image/x-icon"
     />
     <script type="text/javascript" src="JS/footer.js"></script>
+    <script id="footerScript">
+      let footerDropdown = false;
+      const footerDDHandle = (bool) => {
+        if (footerDropdown && !bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (footerDropdown && bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "flex";
+          footerDropdown = true;
+        }
+      };
+    </script>
     <script>
       let unselectedProject = 1;
       let selectedProject = 0;
@@ -125,15 +143,38 @@
         });
       };
     </script>
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
   </head>
   <body>
-    <div id="navbar">
+    <div id="mobileMenuPopup">
+      <div id="mobileMenuPopupCloseSection">
+        <div
+          id="mobileMenuPopupCloseButton"
+          onclick="mobileMenuLoad(false)"
+        ></div>
+      </div>
+      <a href="about" class="mobileMenuPopupText">About</a>
+      <a href="projects" class="mobileMenuPopupText">Projects</a>
+      <a href="blog" class="mobileMenuPopupText">Blog</a>
+      <a href="contact" class="mobileMenuPopupText">Contact</a>
+      <a href="Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+    </div>
+    <div id="navbar" onclick="footerDDHandle(false)">
       <a href="" id="webpageName">Stacy Vazquez</a>
+      <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
       <div id="menu">
-        <div class="menubutton">About</div>
-        <div class="menubutton">Projects</div>
-        <div class="menubutton">Blog</div>
-        <div class="menubutton">Contact</div>
+        <a href="about" class="menubutton">About</a>
+        <a href="projects" class="menubutton">Projects</a>
+        <a href="blog" class="menubutton">Blog</a>
+        <a href="contact" class="menubutton">Contact</a>
         <a
           href="Stacy Resume.pdf"
           target="_blank"
@@ -144,7 +185,7 @@
         </a>
       </div>
     </div>
-    <div id="homebody">
+    <div id="homebody" onclick="footerDDHandle(false)">
       <div id="helloStrip">
         <div id="helloStripBox1">
           <div
@@ -294,7 +335,7 @@
                   animation-duration: 10s;
                   animation-iteration-count: 1;
                 "
-                >return link<span class="helloTerminalCursor">|</span></span
+                >print(link)<span class="helloTerminalCursor">|</span></span
               >
               <br /><span
                 style="
@@ -384,8 +425,9 @@
           style="margin-left: 0; text-align: center; margin-top: 1%"
         >
           If there's anything about me, it's that I'm always working on
-          something. <br />Scroll to see my featured projects and click
-          <i>more</i> to unlock my
+          something. <br /><span id="projectsDesDesk"
+            >Scroll to see my featured projects and c</span
+          ><span id="projectsDesMB">C</span>lick <i>more</i> to unlock my
           <span style="color: #06617a; font-weight: 500">To-Do List</span>!
         </div>
         <div id="projectsGalleryStrip">
@@ -730,22 +772,31 @@
           <div id="newConversationText">New Conversation</div>
         </a>
       </div>
+    </div>
+    <div id="footer">
+      <div id="taskbarFolderDropdown">
+        <a href="" class="taskbarFolderOption">Home</a>
+        <a href="about" class="taskbarFolderOption">About</a>
+        <a href="projects" class="taskbarFolderOption">Projects</a>
+        <a href="blog" class="taskbarFolderOption">Blog</a>
+        <a href="contact" class="taskbarFolderOption">Contact</a>
+        <a href="Stacy Resume.pdf" target="_blank" class="taskbarFolderOption"
+          >Resume</a
+        >
+      </div>
       <div id="taskbarStrip">
         <a
           href="https://github.com/mostazia/personal-webpage"
           target="_blank"
           class="taskbarText"
-          style="
-            text-decoration: none;
-            justify-content: left;
-            margin-left: 2.5%;
-            margin-right: auto;
-          "
+          id="footerMadeBy"
         >
           Designed & Built by Stacy Vazquez
         </a>
         <div id="taskbarApps">
           <div
+            onclick="footerDDHandle(true)"
+            id="folderApp"
             class="taskbarApp"
             style="background-image: url('Images/TaskbarFolder.png')"
           ></div>
@@ -788,11 +839,7 @@
             "
           ></a>
         </div>
-        <div
-          class="taskbarText"
-          id="lastUp"
-          style="justify-content: right; margin-right: 2.5%; margin-left: auto"
-        ></div>
+        <div class="taskbarText" id="lastUp">Last Updated 4/1/2023</div>
         <script type="text/javascript">
           document.getElementById("lastUp").innerHTML =
             "Last updated " + lastUpdated;

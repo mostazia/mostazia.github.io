@@ -49,7 +49,7 @@ body {
   height: 7vh;
   margin-right: 2vw;
   margin-left: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: right;
 }
@@ -70,6 +70,66 @@ body {
 .menubutton:hover {
   color: #06617a;
   font-weight: 500;
+}
+
+#mobileMenu {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuNavbar.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#mobileMenuPopup {
+  width: 101vw;
+  height: 100vh;
+  background: rgba(6, 97, 122, 0.8);
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+#mobileMenuPopupCloseSection {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+#mobileMenuPopupCloseButton {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuXButton.png");
+  background-size: contain;
+  background-position: center;
+  background-color: #387b8f;
+}
+
+.mobileMenuPopupText {
+  width: 30%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3.75vh;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.25vh solid white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
 }
 
 ::-webkit-scrollbar {
@@ -94,19 +154,19 @@ body {
 }
 
 .blogPostContainer {
-  width: 75vw;
+  width: 90vw;
   min-height: 50vh;
   margin-top: 2.5vh;
   display: flex;
 }
 
 .blogPostWindow {
-  width: 50vw;
+  width: 90vw;
 }
 
 .blogPostWindowTopFrame {
   width: 100%;
-  height: calc(50vw / 20);
+  aspect-ratio: 20;
   background: url("../Images/BlogPostWindowTop.png");
   background-size: contain;
   background-position: center;
@@ -116,7 +176,7 @@ body {
 
 .blogPostWindowBottomFrame {
   width: 100%;
-  height: calc(50vw / 20);
+  aspect-ratio: 20;
   background: url("../Images/BlogPostWindowBottom.png");
   background-size: contain;
   background-position: center;
@@ -165,12 +225,24 @@ body {
   color: #8c0461;
 }
 
+.blogPostInfoMobile {
+  width: 90vw;
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 .blogPostRightStrip {
   width: 25%;
   height: 100vh;
   margin-right: 0;
   margin-left: auto;
-  display: flex;
+  display: none;
   flex-direction: column;
   box-sizing: border-box;
   position: sticky;
@@ -202,11 +274,13 @@ body {
 
 .blogPostInfoTag {
   display: inline;
-  height: calc(25vw / 20);
+  height: 2vh;
+  display: flex;
+  align-items: center;
   background: #dbf6fd;
   font-family: codefont;
   color: #06617a;
-  font-size: calc(25vw / 24);
+  font-size: 2.75vw;
   font-weight: 300;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
@@ -225,32 +299,33 @@ body {
   padding-bottom: 5vh;
   font-family: namefont;
   color: #8c0461;
-  font-size: calc(25vw / 8);
+  font-size: 4vh;
   font-weight: 400;
 }
 
 #taskbarStrip {
   width: 100vw;
-  aspect-ratio: 26;
+  aspect-ratio: 2.75;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background: #06617a;
   opacity: 0.8;
 }
 
 .taskbarText {
-  font-size: calc(0.5 * 100vw / 52);
+  font-size: 1.75vh;
   font-family: codefont;
   font-weight: 400;
   color: white;
   display: flex;
   align-items: center;
-  width: 20%;
 }
 
 #taskbarApps {
-  height: 90%;
+  width: 70%;
   aspect-ratio: 7;
   display: flex;
   align-items: center;
@@ -265,6 +340,122 @@ body {
   background-position: center;
   background-size: contain;
 }
+
 .taskbarApp:hover {
   transform: translateY(-10%);
+}
+
+#folderApp {
+  display: none;
+}
+
+#footerMadeBy {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#lastUp {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#taskbarFolderDropdown {
+  width: 8vw;
+  aspect-ratio: calc(1 / 1.5);
+  position: absolute;
+  margin-bottom: calc(100vw / 26 + 1vh);
+  z-index: 5;
+  transform: translateX(calc((-100vw / 26 * 0.9 * 7 / 2)));
+  background: rgba(219, 246, 253, 0.75);
+  border: 0.25vh solid #06617a;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.taskbarFolderOption {
+  width: 100%;
+  height: calc(8vw * 1.5 / 6);
+  font-family: codefont;
+  font-size: calc(8vw * 1.5 / 12);
+  font-weight: 300;
+  color: #06617a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.taskbarFolderOption:hover {
+  background-color: #fde1e0;
+}
+
+#footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+@media screen and (min-width: 100vh) {
+  #menu {
+    display: flex;
+  }
+  #webpageName {
+    margin-left: 2vw;
+  }
+  #mobileMenu {
+    display: none;
+  }
+  .blogPostInfoMobile {
+    display: none;
+  }
+  .blogPostContainer {
+    width: 75vw;
+  }
+  .blogPostWindow {
+    width: 50vw;
+  }
+  .blogPostInfoTag {
+    display: inline;
+    font-size: calc(25vw / 24);
+    height: calc(25vw / 20);
+  }
+  .blogPostRightStrip {
+    display: flex;
+  }
+  .blogPostThankYou {
+    font-size: calc(25vw / 8);
+  }
+  #footer {
+    max-height: calc(100vw / 26);
+  }
+  #taskbarStrip {
+    width: 100vw;
+    aspect-ratio: 26;
+    flex-direction: row;
+    justify-content: unset;
+  }
+  #taskbarApps {
+    height: 90%;
+    width: auto;
+    aspect-ratio: 7;
+  }
+  #taskbarText {
+    font-size: calc(0.5 * 100vw / 52);
+    width: 20%;
+  }
+  #footerMadeBy {
+    justify-content: left;
+    margin-left: 2.5%;
+    margin-right: auto;
+  }
+  #lastUp {
+    justify-content: right;
+    margin-right: 2.5%;
+    margin-left: auto;
+  }
 }

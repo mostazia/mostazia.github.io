@@ -34,7 +34,7 @@ body {
 
 #webpageName {
   margin-top: min(1vh, calc(15vw / 9.5));
-  margin-left: 2vw;
+  margin-left: 5vw;
   font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
   font-family: namefont;
   font-weight: 200;
@@ -49,11 +49,10 @@ body {
   height: 7vh;
   margin-right: 2vw;
   margin-left: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: right;
 }
-
 .menubutton {
   font-family: "Urbanist", sans-serif;
   font-size: min(2.6125 vh, 3.3vw);
@@ -72,6 +71,66 @@ body {
   font-weight: 500;
 }
 
+#mobileMenu {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuNavbar.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#mobileMenuPopup {
+  width: 101vw;
+  height: 100vh;
+  background: rgba(6, 97, 122, 0.8);
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+#mobileMenuPopupCloseSection {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+#mobileMenuPopupCloseButton {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuXButton.png");
+  background-size: contain;
+  background-position: center;
+  background-color: #387b8f;
+}
+
+.mobileMenuPopupText {
+  width: 30%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3.75vh;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.25vh solid white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+
 #homebody {
   width: 100vw;
   box-sizing: border-box;
@@ -88,7 +147,6 @@ body {
 
 #helloStripBox1 {
   width: 100%;
-  min-height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -209,6 +267,7 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column-reverse;
+  margin-top: 5vh;
 }
 
 #aboutImageStrip {
@@ -243,12 +302,20 @@ body {
 }
 
 #projectsStrip {
-  min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
+}
+
+#projectsDesMB {
+  display: inline;
+}
+
+#projectsDesDesk {
+  display: none;
 }
 
 #projectsGalleryStrip {
@@ -376,12 +443,12 @@ body {
 }
 
 #blogStrip {
-  min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
 }
 
 #blogPreviewsStrip {
@@ -481,13 +548,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
 }
 
 #newConversationBox {
   height: min(6vh, 8vw);
   min-width: 50%;
-  margin-top: 3%;
-  margin-bottom: 4%;
+  margin-top: 3vh;
+  margin-bottom: 7vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,26 +587,27 @@ body {
 
 #taskbarStrip {
   width: 100vw;
-  aspect-ratio: 26;
+  aspect-ratio: 2.75;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background: #06617a;
   opacity: 0.8;
 }
 
 .taskbarText {
-  font-size: calc(0.5 * 100vw / 52);
+  font-size: 1.75vh;
   font-family: codefont;
   font-weight: 400;
   color: white;
   display: flex;
   align-items: center;
-  width: 20%;
 }
 
 #taskbarApps {
-  height: 90%;
+  width: 70%;
   aspect-ratio: 7;
   display: flex;
   align-items: center;
@@ -553,8 +622,64 @@ body {
   background-position: center;
   background-size: contain;
 }
+
 .taskbarApp:hover {
   transform: translateY(-10%);
+}
+
+#folderApp {
+  display: none;
+}
+
+#footerMadeBy {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#lastUp {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#taskbarFolderDropdown {
+  width: 8vw;
+  aspect-ratio: calc(1 / 1.5);
+  position: absolute;
+  margin-bottom: calc(100vw / 26 + 1vh);
+  z-index: 5;
+  transform: translateX(calc((-100vw / 26 * 0.9 * 7 / 2)));
+  background: rgba(219, 246, 253, 0.75);
+  border: 0.25vh solid #06617a;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.taskbarFolderOption {
+  width: 100%;
+  height: calc(8vw * 1.5 / 6);
+  font-family: codefont;
+  font-size: calc(8vw * 1.5 / 12);
+  font-weight: 300;
+  color: #06617a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.taskbarFolderOption:hover {
+  background-color: #fde1e0;
+}
+
+#footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 .heading1 {
@@ -571,7 +696,7 @@ body {
   width: 87.5%;
   color: #696969;
   font-family: "Urbanist", sans-serif;
-  font-size: 1.8vw;
+  font-size: 2vw;
   font-weight: 300;
   line-height: 1.75;
 }
@@ -781,6 +906,15 @@ body {
 }
 
 @media screen and (min-width: 100vh) {
+  #menu {
+    display: flex;
+  }
+  #webpageName {
+    margin-left: 2vw;
+  }
+  #mobileMenu {
+    display: none;
+  }
   #helloStrip {
     height: 90.5vh;
   }
@@ -789,6 +923,7 @@ body {
   }
   #helloStripBox1 {
     width: 50%;
+    min-height: 100%;
   }
   #welcome {
     margin-top: 8.75%;
@@ -813,15 +948,52 @@ body {
   }
   #projectsStrip {
     margin-top: 10vh;
+    min-height: 100vh;
+  }
+  #projectsDesMB {
+    display: none;
+  }
+
+  #projectsDesDesk {
+    display: inline;
   }
   #projectsGalleryStrip {
     display: flex;
   }
   #blogStrip {
     margin-top: 10vh;
+    min-height: 100vh;
   }
   #contactStrip {
     margin-top: 10vh;
+  }
+  #footer {
+    max-height: calc(100vw / 26);
+  }
+  #taskbarStrip {
+    width: 100vw;
+    aspect-ratio: 26;
+    flex-direction: row;
+    justify-content: unset;
+  }
+  #taskbarApps {
+    height: 90%;
+    width: auto;
+    aspect-ratio: 7;
+  }
+  #taskbarText {
+    font-size: calc(0.5 * 100vw / 52);
+    width: 20%;
+  }
+  #footerMadeBy {
+    justify-content: left;
+    margin-left: 2.5%;
+    margin-right: auto;
+  }
+  #lastUp {
+    justify-content: right;
+    margin-right: 2.5%;
+    margin-left: auto;
   }
   .paragraph1 {
     font-size: 3.077vh;
