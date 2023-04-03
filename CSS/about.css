@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: namefont;
+  src: url("../Fonts/namefont.ttf");
+}
+
+@font-face {
+  font-family: codefont;
+  src: url(../Fonts/CascadiaCode.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fde1e0;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+#navbar {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#webpageName {
+  margin-top: min(1vh, calc(15vw / 9.5));
+  margin-left: 2vw;
+  font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
+  font-family: namefont;
+  font-weight: 200;
+  color: #696969;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu {
+  width: 50%;
+  height: 7vh;
+  margin-right: 2vw;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.menubutton {
+  font-family: "Urbanist", sans-serif;
+  font-size: min(2.6125 vh, 3.3vw);
+  font-weight: 400;
+  color: #696969;
+  height: min(6vh);
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menubutton:hover {
+  color: #06617a;
+  font-weight: 500;
+}
+
+#mobileMenu {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuNavbar.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#mobileMenuPopup {
+  width: 101vw;
+  height: 100vh;
+  background: rgba(6, 97, 122, 0.8);
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+#mobileMenuPopupCloseSection {
+  top: 0;
+  left: 0;
+  height: min(9.5vh, 15vw);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+#mobileMenuPopupCloseButton {
+  height: 7vw;
+  aspect-ratio: 1;
+  margin-right: 5vw;
+  margin-left: auto;
+  background-image: url("../Images/MobileMenuXButton.png");
+  background-size: contain;
+  background-position: center;
+  background-color: #387b8f;
+}
+
+.mobileMenuPopupText {
+  width: 30%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3.75vh;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.25vh solid white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06617a;
+  border-radius: 0.25vw;
+}
+
+#taskbarStrip {
+  width: 100vw;
+  aspect-ratio: 2.75;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #06617a;
+  opacity: 0.8;
+}
+
+.taskbarText {
+  font-size: 1.75vh;
+  font-family: codefont;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#taskbarApps {
+  width: 70%;
+  aspect-ratio: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taskbarApp {
+  height: 80%;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+}
+
+.taskbarApp:hover {
+  transform: translateY(-10%);
+}
+
+#folderApp {
+  display: none;
+}
+
+#footerMadeBy {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#lastUp {
+  text-decoration: none;
+  justify-content: center;
+}
+
+#taskbarFolderDropdown {
+  width: 8vw;
+  aspect-ratio: calc(1 / 1.5);
+  position: absolute;
+  margin-bottom: calc(100vw / 26 + 1vh);
+  z-index: 5;
+  transform: translateX(calc((-100vw / 26 * 0.9 * 7 / 2)));
+  background: rgba(219, 246, 253, 0.75);
+  border: 0.25vh solid #06617a;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.taskbarFolderOption {
+  width: 100%;
+  height: calc(8vw * 1.5 / 6);
+  font-family: codefont;
+  font-size: calc(8vw * 1.5 / 12);
+  font-weight: 300;
+  color: #06617a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.taskbarFolderOption:hover {
+  background-color: #fde1e0;
+}
+
+#footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+#aboutPageBody {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+}
+
+.aboutPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.aboutPageLeftStrip {
+  width: 50%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutPageRightStrip {
+  width: 50%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#aboutPageTitle {
+  margin-left: 7.5%;
+  color: #8c0461;
+  font-family: namefont;
+  font-size: 9vh;
+  font-weight: 600;
+}
+
+.aboutPageText {
+  margin-left: 7.5%;
+  margin-top: 3%;
+  width: 85%;
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3vh;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+#aboutPageMITSoloPic {
+  width: 20vw;
+  aspect-ratio: calc(2022 / 2850);
+  background-image: url("../Images/AboutPageMITSoloPic.png");
+  background-size: cover;
+  background-position: top;
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: relative;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  top: calc((-20vw * 3000 / 2022) + (100vh - 5vw - (20vw * 2546 / 2022)));
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  font-size: 0;
+  cursor: pointer;
+}
+
+#aboutPageMITSoloPic:hover {
+  aspect-ratio: calc(2022 / 3000);
+  z-index: 4;
+  font-size: calc(12.5vw * 3000 / 2022 - 12.5vw * 2850 / 2022);
+}
+
+#aboutPageFamilyPic {
+  width: calc(20vw * 3000 / 2022);
+  aspect-ratio: calc(3000 / 2396);
+  background-image: url("../Images/AboutPageFamilyPic.png");
+  background-size: cover;
+  flex-shrink: 0;
+  flex-grow: 0;
+  z-index: 2;
+  margin-bottom: calc(20vw * 2546 / 2022 - 20vw * 2396 / 2022);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  font-size: 0;
+  cursor: pointer;
+}
+
+#aboutPageFamilyPic:hover {
+  aspect-ratio: calc(3000 / 2546);
+  margin-bottom: 0;
+  font-size: calc(12.5vw * 2546 / 2022 - 12.5vw * 2396 / 2022);
+}
+
+#aboutPageGraduationPic {
+  width: 40.5%;
+  aspect-ratio: calc(2699 / 2850);
+  background-image: url("../Images/AboutPageGraduationPic.png");
+  background-size: cover;
+  background-position: top;
+  flex-grow: 0;
+  margin-bottom: calc(50vw * 0.405 * (150 / 2699));
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 0;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#aboutPageGraduationPic:hover {
+  aspect-ratio: calc(2699 / 3000);
+  margin-bottom: 0;
+  font-size: calc(37.5vw * 0.405 * (150 / 2699));
+}
+
+#aboutPageViolinPic {
+  width: 40.5%;
+  aspect-ratio: calc(2699 / 2850);
+  background-image: url("../Images/AboutPageViolinPic.png");
+  background-size: cover;
+  background-position: top;
+  flex-grow: 0;
+  margin-bottom: calc(50vw * 0.405 * (150 / 2699));
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 0;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#aboutPageViolinPic:hover {
+  aspect-ratio: calc(2699 / 3000);
+  margin-bottom: 0;
+  font-size: calc(37.5vw * 0.405 * (150 / 2699));
+}
+
+#aboutPageCommitmentPic {
+  width: 40.5%;
+  aspect-ratio: calc(2699 / 2850);
+  background-image: url("../Images/AboutPageCommitmentPic.png");
+  background-size: cover;
+  background-position: top;
+  flex-grow: 0;
+  margin-bottom: calc(50vw * 0.405 * (150 / 2699));
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 0;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#aboutPageCommitmentPic:hover {
+  aspect-ratio: calc(2699 / 3000);
+  margin-bottom: 0;
+  font-size: calc(37.5vw * 0.405 * (150 / 2699));
+}
+
+#aboutPageCapPic {
+  width: 40.5%;
+  aspect-ratio: calc(2699 / 2850);
+  background-image: url("../Images/AboutPageCapPic.png");
+  background-size: cover;
+  background-position: top;
+  flex-grow: 0;
+  margin-bottom: calc(50vw * 0.405 * (150 / 2699));
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 0;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#aboutPageCapPic:hover {
+  aspect-ratio: calc(2699 / 3000);
+  margin-bottom: 0;
+  font-size: calc(37.5vw * 0.405 * (150 / 2699));
+}
+
+#aboutPageNowPic {
+  width: 60%;
+  aspect-ratio: calc(2420 / 3000);
+  background-image: url("../Images/AboutMeNowPic.png");
+  background-size: cover;
+}
+
+@media screen and (min-width: 100vh) {
+  #menu {
+    display: flex;
+  }
+  #webpageName {
+    margin-left: 2vw;
+  }
+  #mobileMenu {
+    display: none;
+  }
+  #footer {
+    max-height: calc(100vw / 26);
+  }
+  #taskbarStrip {
+    width: 100vw;
+    aspect-ratio: 26;
+    flex-direction: row;
+    justify-content: unset;
+  }
+  #taskbarApps {
+    height: 90%;
+    width: auto;
+    aspect-ratio: 7;
+  }
+  #taskbarText {
+    font-size: calc(0.5 * 100vw / 52);
+    width: 20%;
+  }
+  #footerMadeBy {
+    justify-content: left;
+    margin-left: 2.5%;
+    margin-right: auto;
+  }
+  #lastUp {
+    justify-content: right;
+    margin-right: 2.5%;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-height: 100vw) {
+}

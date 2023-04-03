@@ -14,6 +14,15 @@
       href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
       type="image/x-icon"
     />
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
     <script type="text/javascript" src="JS/footer.js"></script>
     <script id="footerScript">
       let footerDropdown = false;
@@ -33,7 +42,7 @@
         }
       };
     </script>
-    <script>
+    <script id="projectGalleryScript">
       let unselectedProject = 1;
       let selectedProject = 0;
       const changeSelectProj = (number) => {
@@ -141,15 +150,6 @@
             return changeSelectProj(number);
           }
         });
-      };
-    </script>
-    <script id="navbarScriptMobile">
-      const mobileMenuLoad = (bool) => {
-        if (bool) {
-          document.getElementById("mobileMenuPopup").style.display = "flex";
-        } else {
-          document.getElementById("mobileMenuPopup").style.display = "none";
-        }
       };
     </script>
   </head>
@@ -413,7 +413,7 @@
               </div>
             </div>
           </div>
-          <div class="moreButton">m o r e</div>
+          <a href="about" class="moreButton">m o r e</a>
         </div>
       </div>
       <div id="projectsStrip">
@@ -696,9 +696,13 @@
             </div>
           </div>
         </div>
-        <div class="moreButton" style="margin-left: auto; margin-bottom: 5vh">
+        <a
+          href="projects"
+          class="moreButton"
+          style="margin-left: auto; margin-bottom: 5vh"
+        >
           m o r e
-        </div>
+        </a>
       </div>
       <div id="blogStrip">
         <div class="heading1" style="margin-left: 0; margin-top: 1.5%">
@@ -744,14 +748,22 @@
           <div class="blogPreviewWindow"></div>
           <div class="blogPreviewWindow"></div> -->
         </div>
-        <div class="moreButton" style="margin-left: auto; margin-bottom: 5vh">
+        <a
+          href="blog"
+          class="moreButton"
+          style="margin-left: auto; margin-bottom: 5vh"
+        >
           m o r e
-        </div>
+        </a>
       </div>
       <div id="contactStrip">
-        <div class="heading1" style="margin-left: 0; margin-top: 1.5%">
+        <a
+          href="contact"
+          class="heading1"
+          style="margin-left: 0; margin-top: 1.5%"
+        >
           Contact
-        </div>
+        </a>
         <div
           class="paragraph1"
           style="

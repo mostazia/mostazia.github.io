@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" href="CSS/about.css" />
+    <link
+      rel="shortcut icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
+    <script type="text/javascript" src="JS/footer.js"></script>
+    <script id="footerScript">
+      let footerDropdown = false;
+      const footerDDHandle = (bool) => {
+        if (footerDropdown && !bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (footerDropdown && bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "flex";
+          footerDropdown = true;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="mobileMenuPopup">
+      <div id="mobileMenuPopupCloseSection">
+        <div
+          id="mobileMenuPopupCloseButton"
+          onclick="mobileMenuLoad(false)"
+        ></div>
+      </div>
+      <a href="about" class="mobileMenuPopupText">About</a>
+      <a href="projects" class="mobileMenuPopupText">Projects</a>
+      <a href="blog" class="mobileMenuPopupText">Blog</a>
+      <a href="contact" class="mobileMenuPopupText">Contact</a>
+      <a href="Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+    </div>
+    <div id="navbar" onclick="footerDDHandle(false)">
+      <a href=".." id="webpageName">Stacy Vazquez</a>
+      <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
+      <div id="menu">
+        <a href="about" class="menubutton">About</a>
+        <a href="projects" class="menubutton">Projects</a>
+        <a href="blog" class="menubutton">Blog</a>
+        <a href="contact" class="menubutton">Contact</a>
+        <a
+          href="Stacy Resume.pdf"
+          target="_blank"
+          class="menubutton"
+          style="color: #8c0461; font-weight: bold"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+    <div id="aboutPageBody">
+      <div class="aboutPageContainer">
+        <div
+          class="aboutPageLeftStrip"
+          style="padding: 2.5%; justify-content: start"
+        >
+          <div id="aboutPageFamilyPic">
+            My mom and sister have been key in my education
+          </div>
+          <div id="aboutPageMITSoloPic">On the steps of the MIT Dome</div>
+        </div>
+        <div class="aboutPageRightStrip">
+          <div id="aboutPageTitle">About Me</div>
+          <div class="aboutPageText">
+            One of my earliest memories is me sitting with my sister at her
+            computer and browsing the internet for Barbie pictures. She would
+            print the images out and give them to me to play with. I found the
+            machine fascinating. That Christmas, I asked Santa for computer.
+            Though, at the time, I saw it as a window to a world of beautiful
+            barbie pictures, I quickly realized it had more amazing
+            capabilities. And, to my delight, Santa delivered on Christmas. I
+            still remember my joy as I unboxed my educational laptop. Little did
+            my mom and I know, that gift would spark a passion that would still
+            live on fifteen years later.
+            <br /><br />
+            Growing up in a Spanish-speaking household, this toy provided me
+            with the support I needed to improve my English. But, above all, it
+            introduced me to my first love: mathematics.
+          </div>
+        </div>
+      </div>
+      <div class="aboutPageContainer">
+        <div class="aboutPageLeftStrip">
+          <div class="aboutPageText" style="margin-top: 0">
+            Growing up, I <i style="color: #8c0461">loved</i> math. I saw as a
+            universal language that I could speak both at school and at home. I
+            loved completing drills and performing mental calculations. I
+            admired how math built upon itself.<br /><br />
+            So, throughout my K-12 education, I made it a mission to help others
+            see the beauty in math too. I started tutoring when I was nine and
+            have continued since. I discovered that students didn't appreciate
+            math because they felt it was too abstract to connect it to their
+            lives and futures. This resulted in them lacking motivation to learn
+            challenging topics.<br /><br />
+            This encouraged me to begin dabbling in educational content
+            creation. I grew up in a family of artistically talented indivudals.
+            And, as more of a STEM person, I struggled finding my creative
+            outlet. When I began creating worksheets, powerpoints, and
+            infographics. I realized that, with the help of math and computers,
+            I could create the aesthetically pleasing content I desired. And,
+            so, my brain became my paintbrush.
+          </div>
+        </div>
+        <div
+          class="aboutPageRightStrip"
+          style="
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <div id="aboutPageGraduationPic">
+            In 2022, I graduated Salutatorian!
+          </div>
+          <div id="aboutPageViolinPic">I played violin for six years!</div>
+          <div id="aboutPageCommitmentPic">In May 2022, I commited to MIT!</div>
+          <div id="aboutPageCapPic">In August 2022, I flew to Boston.</div>
+        </div>
+      </div>
+      <div class="aboutPageContainer">
+        <div class="aboutPageLeftStrip" style="align-items: center">
+          <div id="aboutPageNowPic"></div>
+        </div>
+        <div class="aboutPageRightStrip"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="taskbarFolderDropdown">
+        <a href="" class="taskbarFolderOption">Home</a>
+        <a href="about" class="taskbarFolderOption">About</a>
+        <a href="projects" class="taskbarFolderOption">Projects</a>
+        <a href="blog" class="taskbarFolderOption">Blog</a>
+        <a href="contact" class="taskbarFolderOption">Contact</a>
+        <a href="Stacy Resume.pdf" target="_blank" class="taskbarFolderOption"
+          >Resume</a
+        >
+      </div>
+      <div id="taskbarStrip">
+        <a
+          href="https://github.com/mostazia/personal-webpage"
+          target="_blank"
+          class="taskbarText"
+          id="footerMadeBy"
+        >
+          Designed & Built by Stacy Vazquez
+        </a>
+        <div id="taskbarApps">
+          <div
+            onclick="footerDDHandle(true)"
+            id="folderApp"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarFolder.png')"
+          ></div>
+          <a
+            href="mailto:stacyv@mit.edu"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarEmail.png')"
+          ></a>
+          <a
+            href="https://github.com/mostazia"
+            target="_blank"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarGithub.png')"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/stacyvazquez/"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 75%;
+              background-image: url('Images/TaskbarLinkedin.png');
+            "
+          ></a>
+          <a
+            href="https://open.spotify.com/user/penguin9879?si=8e11d8278fb94675"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('Images/TaskbarSpotify.png');
+            "
+          ></a>
+          <a
+            href="https://twitter.com/stacyv_"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('Images/TaskbarTwitter.png');
+            "
+          ></a>
+        </div>
+        <div class="taskbarText" id="lastUp">Last Updated 4/1/2023</div>
+        <script type="text/javascript">
+          document.getElementById("lastUp").innerHTML =
+            "Last updated " + lastUpdated;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
