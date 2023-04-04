@@ -139,7 +139,7 @@ body {
 }
 
 #helloStrip {
-  width: 100%;
+  width: 100vw;
   min-height: calc(100vh - 15vw);
   box-sizing: border-box;
   display: flex;
@@ -929,6 +929,7 @@ body {
     height: 90.5vh;
   }
   #helloStripBox2 {
+    width: 50%;
     display: flex;
   }
   #helloStripBox1 {
