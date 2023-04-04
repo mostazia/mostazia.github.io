@@ -305,7 +305,7 @@ body {
 
 #taskbarStrip {
   width: 100vw;
-  aspect-ratio: 2.75;
+  aspect-ratio: 3;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
