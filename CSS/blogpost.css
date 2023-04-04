@@ -400,6 +400,15 @@ body {
   align-items: center;
 }
 
+@media screen and (min-height: 100vw) {
+  .blogPostContent {
+    font-size: 1.15vh;
+  }
+  .blogPostTitle {
+    font-size: 2.5vh;
+  }
+}
+
 @media screen and (min-width: 100vh) {
   #menu {
     display: flex;
