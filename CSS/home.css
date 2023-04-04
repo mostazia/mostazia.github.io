@@ -159,7 +159,6 @@ body {
   color: #8c0461;
   font-family: namefont;
   font-size: min(11.3125vh, 15.625vw);
-  font-weight: 600;
 }
 
 #introduction {
@@ -328,8 +327,7 @@ body {
 }
 
 #projectsGalleryWindow {
-  /* aspect-ratio = 4750/3000 */
-  height: 97.5%;
+  height: min(97.5%, calc(95vw * 3000 / 4750));
   aspect-ratio: calc(4750 / 3000);
   background-image: url("../Images/BrowserWindowProjects.png");
   background-size: contain;
@@ -340,7 +338,7 @@ body {
 
 #projectsGalleryLayer {
   box-sizing: border-box;
-  width: calc(97.5vh * (4750 / 3000));
+  width: min(calc(97.5vh * (4750 / 3000)), 95vw);
   aspect-ratio: calc(4750 / 3000);
   position: absolute;
   z-index: 2;
@@ -363,7 +361,7 @@ body {
   height: 100%;
   font-family: "Urbanist", sans-serif;
   color: #696969;
-  font-size: calc((97.5vh * (4750 / 3000) / 70));
+  font-size: min(calc(97.5vh * 4750 / 210000), calc(95vw / 70));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,10 +370,10 @@ body {
 
 .projectGalleryDisplay {
   width: 100%;
-  height: calc(95% - (97.5vh * (4750 / 3000) / 35));
+  height: min(calc(95% - (97.5vh * 4750 / 105000)), calc(95% - (95vw / 35)));
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   overflow-y: scroll;
   overflow: overlay;
 }
@@ -386,6 +384,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow-y: visible;
   overflow-x: hidden;
 }
@@ -398,6 +397,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
+  position: sticky;
+  top: 0;
 }
 
 .projectGalleryDisplay::-webkit-scrollbar-thumb {
@@ -405,9 +406,9 @@ body {
 }
 
 .projectGalleryDisplayTitle {
-  margin-top: 15vh;
+  margin-top: 1.5vh;
   font-family: codefont;
-  font-size: min(calc(0.6 * 11.3125vh), calc(0.6 * 15.625vw));
+  font-size: min(calc(0.075 * 97.5vh), calc(0.075 * 95vw * 3000 / 4750));
   font-weight: 500;
   user-select: none;
   text-decoration: none;
@@ -416,11 +417,11 @@ body {
 .projectGalleryDisplayDescription {
   max-width: 85%;
   margin-top: 4vh;
-  margin-bottom: 4vh;
+  margin-bottom: 1.5vh;
   text-align: center;
   color: #696969;
   font-family: codefont;
-  font-size: min(calc(0.7 * 3.077vh), calc(0.7 * 4.25vw));
+  font-size: min(calc(0.025 * 97.5vh), calc(0.025 * 95vw * 3000 / 4750));
   font-weight: 300;
   line-height: 1.75;
   user-select: none;
@@ -587,7 +588,7 @@ body {
 
 #taskbarStrip {
   width: 100vw;
-  aspect-ratio: 2.75;
+  aspect-ratio: 3;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -598,7 +599,7 @@ body {
 }
 
 .taskbarText {
-  font-size: 1.75vh;
+  font-size: 1.5vh;
   font-family: codefont;
   font-weight: 400;
   color: white;
@@ -680,6 +681,7 @@ body {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  width: 100vw;
 }
 
 .heading1 {
@@ -687,6 +689,7 @@ body {
   color: #8c0461;
   font-family: namefont;
   font-size: min(11.3125vh, 15.625vw);
+  text-decoration: none;
 }
 
 .paragraph1 {
@@ -695,13 +698,13 @@ body {
   width: 87.5%;
   color: #696969;
   font-family: "Urbanist", sans-serif;
-  font-size: 2vw;
+  font-size: 4.5vw;
   font-weight: 300;
   line-height: 1.75;
 }
 
 .moreButton {
-  height: min(5.5vh, 8vw);
+  min-height: min(5.5vh, 8vw);
   aspect-ratio: 3;
   margin-left: 5%;
   margin-right: auto;
@@ -715,6 +718,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   cursor: pointer;
 }
 
