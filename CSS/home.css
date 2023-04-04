@@ -327,7 +327,7 @@ body {
 }
 
 #projectsGalleryWindow {
-  height: min(97.5%, calc(95vw * 3000 / 4750));
+  height: min(97.5vh, calc(95vw * 3000 / 4750));
   aspect-ratio: calc(4750 / 3000);
   background-image: url("../Images/BrowserWindowProjects.png");
   background-size: contain;
@@ -371,6 +371,10 @@ body {
 .projectGalleryDisplay {
   width: 100%;
   height: min(calc(95% - (97.5vh * 4750 / 105000)), calc(95% - (95vw / 35)));
+  max-height: min(
+    calc(95% - (97.5vh * 4750 / 105000)),
+    calc(95% - (95vw / 35))
+  );
   display: flex;
   flex-direction: row;
   align-items: start;
