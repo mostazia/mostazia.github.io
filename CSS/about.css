@@ -292,9 +292,16 @@ body {
   width: 85%;
   color: #696969;
   font-family: "Urbanist", sans-serif;
-  font-size: 3vh;
+  font-size: max(1.40859375vw, 2.5vh);
   font-weight: 300;
   line-height: 1.75;
+}
+
+.aboutPageSignature {
+  font-size: max(calc(2.5 * 1.40859375vw), calc(2.5 * 2.5vh));
+  font-family: namefont;
+  color: #8c0461;
+  margin-top: 1vh;
 }
 
 #aboutPageMITSoloPic {
@@ -307,7 +314,6 @@ body {
   flex-grow: 0;
   position: relative;
   margin-left: auto;
-  margin-top: auto;
   margin-right: 0;
   margin-bottom: 0;
   top: calc((-20vw * 3000 / 2022) + (100vh - 5vw - (20vw * 2546 / 2022)));
