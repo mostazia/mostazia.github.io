@@ -1016,6 +1016,9 @@ body {
     font-size: calc(0.5 * 100vw / 52);
     width: 20%;
   }
+  #folderApp {
+    display: unset;
+  }
   #footerMadeBy {
     justify-content: left;
     margin-left: 2.5%;

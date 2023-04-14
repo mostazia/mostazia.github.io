@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" href="CSS/blog.css" />
+    <link rel="stylesheet" href="CSS/template.css" />
+    <link
+      rel="shortcut icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
+    <script type="text/javascript" src="JS/footer.js"></script>
+    <script id="footerScript">
+      let footerDropdown = false;
+      const footerDDHandle = (bool) => {
+        if (footerDropdown && !bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (footerDropdown && bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "flex";
+          footerDropdown = true;
+        }
+      };
+    </script>
+    <script id="blogDropdownScript">
+      const loadBlogDropdowns = (num) => {
+        if (num === 1) {
+          document.getElementById("blogPageSortMenu").style.display = "flex";
+        } else if (num === 2) {
+          document.getElementById("blogPageFilterMenu").style.display = "flex";
+        }
+      };
+      window.addEventListener("click", function (event) {
+        if (!event.target.matches(".blogPageActionButton")) {
+          document.getElementById("blogPageSortMenu").style.display = "none";
+          document.getElementById("blogPageFilterMenu").style.display = "none";
+        }
+      });
+      const changeSortOrder = (num) => {
+        if (num === 1) {
+          document.getElementById(
+            "blogPagePostsContainer"
+          ).style.flexDirection = "row";
+          console.log("thing");
+        }
+        if (num === 2) {
+          document.getElementById(
+            "blogPagePostsContainer"
+          ).style.flexDirection = "row-reverse";
+          console.log("stuff");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="blogPageSortMenu">
+      <div class="blogPageDropdownButton" onclick="changeSortOrder(1)">
+        Newest
+      </div>
+      <div class="blogPageDropdownButton" onclick="changeSortOrder(2)">
+        Oldest
+      </div>
+    </div>
+    <div id="blogPageFilterMenu">
+      <div class="blogPageDropdownButton">All Posts</div>
+      <div class="blogPageDropdownButton">Favorites</div>
+    </div>
+    <div id="mobileMenuPopup">
+      <div id="mobileMenuPopupCloseSection">
+        <div
+          id="mobileMenuPopupCloseButton"
+          onclick="mobileMenuLoad(false)"
+        ></div>
+      </div>
+      <a href="about" class="mobileMenuPopupText">About</a>
+      <a href="projects" class="mobileMenuPopupText">Projects</a>
+      <a href="blog" class="mobileMenuPopupText">Blog</a>
+      <a href="contact" class="mobileMenuPopupText">Contact</a>
+      <a href="Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+    </div>
+    <div id="navbar" onclick="footerDDHandle(false)">
+      <a href=".." id="webpageName">Stacy Vazquez</a>
+      <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
+      <div id="menu">
+        <a href="about" class="menubutton">About</a>
+        <a href="projects" class="menubutton">Projects</a>
+        <a href="blog" class="menubutton">Blog</a>
+        <a href="contact" class="menubutton">Contact</a>
+        <a
+          href="Stacy Resume.pdf"
+          target="_blank"
+          class="menubutton"
+          style="color: #8c0461; font-weight: bold"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+    <div id="blogPageBody" onclick="footerDDHandle(false)">
+      <div id="blogPageTitle">
+        <div style="max-height: 9vh; margin-top: -1vh">Blog Posts</div>
+        <div class="blogPageActionButton" onclick="loadBlogDropdowns(1)">
+          Sort&nbsp;<span style="margin-top: 0.35vh">▾</span>
+        </div>
+        <div
+          class="blogPageActionButton"
+          style="margin-left: 1.5vw"
+          onclick="loadBlogDropdowns(2)"
+        >
+          Filter&nbsp;<span style="margin-top: 0.35vh">▾</span>
+        </div>
+      </div>
+      <div id="blogPagePostsContainer">
+        <a href="blog/my-college-essays" class="blogPreviewWindow">
+          <div class="blogPreviewSheet">
+            <div class="blogPreviewTitle">My College Essays</div>
+            <div class="blogPreviewDescription">
+              I will always remember December 31, 2021 as the most anticlimactic
+              New Year's Eve of my life. For most young Americans, New Year's
+              Eve is a day to dress up, meet up with relatives or friends, and
+              anticipate the coming year. For seventeen-year-old Stacy
+              Vazquez...
+            </div>
+            <div class="blogPreviewDateReadmore">
+              <div class="blogPreviewDate">4/1/2023</div>
+              <div class="blogPreviewRM">Read More</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="taskbarFolderDropdown">
+        <a href="" class="taskbarFolderOption">Home</a>
+        <a href="about" class="taskbarFolderOption">About</a>
+        <a href="projects" class="taskbarFolderOption">Projects</a>
+        <a href="blog" class="taskbarFolderOption">Blog</a>
+        <a href="contact" class="taskbarFolderOption">Contact</a>
+        <a href="Stacy Resume.pdf" target="_blank" class="taskbarFolderOption"
+          >Resume</a
+        >
+      </div>
+      <div id="taskbarStrip">
+        <a
+          href="https://github.com/mostazia/personal-webpage"
+          target="_blank"
+          class="taskbarText"
+          id="footerMadeBy"
+        >
+          Designed & Built by Stacy Vazquez
+        </a>
+        <div id="taskbarApps">
+          <div
+            onclick="footerDDHandle(true)"
+            id="folderApp"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarFolder.png')"
+          ></div>
+          <a
+            href="mailto:stacyv@mit.edu"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarEmail.png')"
+          ></a>
+          <a
+            href="https://github.com/mostazia"
+            target="_blank"
+            class="taskbarApp"
+            style="background-image: url('Images/TaskbarGithub.png')"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/stacyvazquez/"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 75%;
+              background-image: url('Images/TaskbarLinkedin.png');
+            "
+          ></a>
+          <a
+            href="https://open.spotify.com/user/penguin9879?si=8e11d8278fb94675"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('Images/TaskbarSpotify.png');
+            "
+          ></a>
+          <a
+            href="https://twitter.com/stacyv_"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('Images/TaskbarTwitter.png');
+            "
+          ></a>
+        </div>
+        <div class="taskbarText" id="lastUp">Last Updated 4/1/2023</div>
+        <script type="text/javascript">
+          document.getElementById("lastUp").innerHTML =
+            "Last updated " + lastUpdated;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

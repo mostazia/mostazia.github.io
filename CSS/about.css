@@ -456,9 +456,24 @@ body {
 
 #aboutPageNowPic {
   width: 60%;
-  aspect-ratio: calc(2420 / 3000);
+  aspect-ratio: calc(2420 / 2850);
   background-image: url("../Images/AboutMeNowPic.png");
   background-size: cover;
+  margin-bottom: calc(30vw * (150 / 2420));
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 0;
+  font-family: codefont;
+  color: #06617a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#aboutPageNowPic:hover {
+  aspect-ratio: calc(2420 / 3000);
+  margin-bottom: 0;
+  font-size: calc(30vw * (150 / 2420) * 0.6);
 }
 
 @media screen and (min-width: 100vh) {
@@ -488,6 +503,9 @@ body {
   #taskbarText {
     font-size: calc(0.5 * 100vw / 52);
     width: 20%;
+  }
+  #folderApp {
+    display: unset;
   }
   #footerMadeBy {
     justify-content: left;
