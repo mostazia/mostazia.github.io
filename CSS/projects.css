@@ -59,22 +59,23 @@
   }
   .beepBoopContainer {
     width: 75vw;
-    min-height: 125vw;
+    height: unset;
+    aspect-ratio: unset;
     display: flex;
     flex-direction: column;
   }
   .beepBoopRobot {
-    height: 50vw;
+    min-height: 50vw;
   }
   .beepBoopText {
     width: 75vw;
     margin-top: 3vh;
-    margin-left: 5vw;
   }
   #beepBoopTitle {
     width: 90%;
     font-size: 10vw;
     text-align: center;
+    margin-top: 3vh;
   }
   #beepBoopDescription {
     width: 90%;
