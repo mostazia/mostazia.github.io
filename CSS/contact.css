@@ -108,6 +108,10 @@
   }
   #contactPageTitle {
     font-weight: 300;
+    margin-left: 6vw;
+  }
+  .contactPageText {
+    margin-left: 6vw;
   }
   .formSmallInput {
     width: 85vw;
