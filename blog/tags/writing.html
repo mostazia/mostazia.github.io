@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Projects</title>
-    <link rel="stylesheet" href="CSS/projects.css" />
-    <link rel="stylesheet" href="CSS/template.css" />
+    <title>#Writing</title>
+    <link rel="stylesheet" href="../../CSS/blog.css" />
+    <link rel="stylesheet" href="../../CSS/template.css" />
     <link
       rel="shortcut icon"
       href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
@@ -43,8 +42,56 @@
         }
       };
     </script>
+    <script id="blogDropdownScript">
+      const loadBlogDropdowns = (num) => {
+        if (num === 1) {
+          document.getElementById("blogPageSortMenu").style.display = "flex";
+        } else if (num === 2) {
+          document.getElementById("blogPageFilterMenu").style.display = "flex";
+        }
+      };
+      window.addEventListener("click", function (event) {
+        if (!event.target.matches(".blogPageActionButton")) {
+          document.getElementById("blogPageSortMenu").style.display = "none";
+          document.getElementById("blogPageFilterMenu").style.display = "none";
+        }
+      });
+      const changeSortOrder = (num) => {
+        if (num === 1) {
+          document.getElementById(
+            "blogPagePostsContainer"
+          ).style.flexDirection = "row";
+          console.log("thing");
+        }
+        if (num === 2) {
+          document.getElementById(
+            "blogPagePostsContainer"
+          ).style.flexDirection = "row-reverse";
+          console.log("stuff");
+        }
+      };
+    </script>
   </head>
   <body>
+    <div id="blogPageSortMenu">
+      <div class="blogPageDropdownButton" onclick="changeSortOrder(1)">
+        Newest
+      </div>
+      <div class="blogPageDropdownButton" onclick="changeSortOrder(2)">
+        Oldest
+      </div>
+    </div>
+    <div id="blogPageFilterMenu">
+      <a href="../../blog" class="blogPageDropdownButton">All Posts</a>
+      <a href="../tags/favorites" class="blogPageDropdownButton">Favorites</a>
+      <a href="" class="blogPageDropdownButton">Wrting</a>
+      <a href="../tags/high-school" class="blogPageDropdownButton"
+        >High School</a
+      >
+      <a href="../tags/college-applications" class="blogPageDropdownButton"
+        >Col Apps</a
+      >
+    </div>
     <div id="mobileMenuPopup">
       <div id="mobileMenuPopupCloseSection">
         <div
@@ -52,22 +99,22 @@
           onclick="mobileMenuLoad(false)"
         ></div>
       </div>
-      <a href="about" class="mobileMenuPopupText">About</a>
-      <a href="projects" class="mobileMenuPopupText">Projects</a>
-      <a href="blog" class="mobileMenuPopupText">Blog</a>
-      <a href="contact" class="mobileMenuPopupText">Contact</a>
-      <a href="Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+      <a href="../../about" class="mobileMenuPopupText">About</a>
+      <a href="../../projects" class="mobileMenuPopupText">Projects</a>
+      <a href="../../blog" class="mobileMenuPopupText">Blog</a>
+      <a href="../../contact" class="mobileMenuPopupText">Contact</a>
+      <a href="../../Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
     </div>
     <div id="navbar" onclick="footerDDHandle(false)">
       <a href=".." id="webpageName">Stacy Vazquez</a>
       <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
       <div id="menu">
-        <a href="about" class="menubutton">About</a>
-        <a href="projects" class="menubutton">Projects</a>
-        <a href="blog" class="menubutton">Blog</a>
-        <a href="contact" class="menubutton">Contact</a>
+        <a href="../../about" class="menubutton">About</a>
+        <a href="../../projects" class="menubutton">Projects</a>
+        <a href="../../blog" class="menubutton">Blog</a>
+        <a href="../../contact" class="menubutton">Contact</a>
         <a
-          href="Stacy Resume.pdf"
+          href="../../Stacy Resume.pdf"
           target="_blank"
           class="menubutton"
           style="color: #8c0461; font-weight: bold"
@@ -76,16 +123,37 @@
         </a>
       </div>
     </div>
-    <div id="projectsPageBody" onclick="footerDDHandle(false)">
-      <div class="beepBoopContainer">
-        <div class="beepBoopRobot"></div>
-        <div class="beepBoopText">
-          <div id="beepBoopTitle">Beep Boop</div>
-          <div id="beepBoopDescription">
-            This page is currently under construction. Come back at a later time
-            to see what I'm up to! (This page is one of my ongoing projects :) )
-          </div>
+    <div id="blogPageBody" onclick="footerDDHandle(false)">
+      <div id="blogPageTitle">
+        <div style="max-height: 9vh; margin-top: -1vh">#Wrting</div>
+        <div class="blogPageActionButton" onclick="loadBlogDropdowns(1)">
+          Sort&nbsp;<span style="margin-top: 0.35vh">▾</span>
         </div>
+        <div
+          class="blogPageActionButton"
+          style="margin-left: 1.5vw"
+          onclick="loadBlogDropdowns(2)"
+        >
+          Filter&nbsp;<span style="margin-top: 0.35vh">▾</span>
+        </div>
+      </div>
+      <div id="blogPagePostsContainer">
+        <a href="../my-college-essays" class="blogPreviewWindow">
+          <div class="blogPreviewSheet">
+            <div class="blogPreviewTitle">My College Essays</div>
+            <div class="blogPreviewDescription">
+              I will always remember December 31, 2021 as the most anticlimactic
+              New Year's Eve of my life. For most young Americans, New Year's
+              Eve is a day to dress up, meet up with relatives or friends, and
+              anticipate the coming year. For seventeen-year-old Stacy
+              Vazquez...
+            </div>
+            <div class="blogPreviewDateReadmore">
+              <div class="blogPreviewDate">4/1/2023</div>
+              <div class="blogPreviewRM">Read More</div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <div id="footer">

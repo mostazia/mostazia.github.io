@@ -49,7 +49,7 @@ body {
   height: 7vh;
   margin-right: 2vw;
   margin-left: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: right;
 }
@@ -262,7 +262,7 @@ body {
 
 .aboutPageLeftStrip {
   width: 50%;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -271,7 +271,7 @@ body {
 
 .aboutPageRightStrip {
   width: 50%;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -302,6 +302,10 @@ body {
   font-family: namefont;
   color: #8c0461;
   margin-top: 1vh;
+}
+
+.adjustPaddingStrip {
+  padding: 2.5%;
 }
 
 #aboutPageMITSoloPic {
@@ -520,4 +524,45 @@ body {
 }
 
 @media screen and (min-height: 100vw) {
+  #aboutPageFamilyPic {
+    display: none;
+  }
+  #aboutPageMITSoloPic {
+    display: none;
+  }
+  #aboutPageGraduationPic {
+    display: none;
+  }
+  #aboutPageViolinPic {
+    display: none;
+  }
+  #aboutPageCommitmentPic {
+    display: none;
+  }
+  #aboutPageCapPic {
+    display: none;
+  }
+  #aboutPageNowPic {
+    display: none;
+  }
+  .textBox {
+    width: 100%;
+  }
+  .aboutPageLeftStrip {
+    width: unset;
+  }
+  .aboutPageRightStrip {
+    width: unset;
+  }
+  .aboutPageText {
+    margin-left: 5vw;
+  }
+  .adjustPaddingStrip {
+    padding: 0;
+  }
+  #aboutPageTitle {
+    font-size: 7.5vh;
+    margin-left: 5vw;
+    font-weight: 400;
+  }
 }

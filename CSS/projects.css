@@ -1,0 +1,85 @@
+#projectsPageBody {
+  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  justify-content: center;
+}
+
+.beepBoopContainer {
+  height: 40vh;
+  width: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.beepBoopRobot {
+  height: 100%;
+  aspect-ratio: 1;
+  background-image: url("../Images/RobotPageUpdatingImage.png");
+  background-position: center;
+  background-size: contain;
+}
+
+.beepBoopText {
+  width: 35vh;
+  height: 100%;
+  margin-left: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#beepBoopTitle {
+  font-family: namefont;
+  font-weight: 400;
+  font-size: 6vh;
+  width: 100%;
+  color: #8c0461;
+}
+
+#beepBoopDescription {
+  font-family: codefont;
+  font-weight: 300;
+  font-size: 2.25vh;
+  width: 100%;
+  color: #06617a;
+  margin-top: 2vh;
+  line-height: 1.75;
+}
+
+@media screen and (min-height: 100vw) {
+  #projectsPageBody {
+    min-height: calc(100vh - 15vw - 3vh - 4vh - 100vw / 2.75);
+  }
+  .beepBoopContainer {
+    width: 75vw;
+    aspect-ratio: 2;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .beepBoopRobot {
+    height: 50vw;
+  }
+  .beepBoopText {
+    width: 75vw;
+    margin-top: 3vh;
+    margin-left: 5vw;
+  }
+  #beepBoopTitle {
+    width: 90%;
+    font-size: 10vw;
+    text-align: center;
+  }
+  #beepBoopDescription {
+    width: 90%;
+    font-size: 4.5vw;
+    text-align: center;
+  }
+}

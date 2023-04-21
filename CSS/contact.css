@@ -1,0 +1,126 @@
+#contactPageBody {
+  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+}
+
+#contactContainer {
+  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contactFormStrip {
+  width: 50%;
+  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contactPageTitle {
+  margin-left: 7.5%;
+  color: #8c0461;
+  font-family: namefont;
+  font-size: 9vh;
+  font-weight: 600;
+}
+
+.contactPageText {
+  margin-left: 7.5%;
+  margin-top: 3%;
+  width: 85%;
+  color: #696969;
+  font-family: "Urbanist", sans-serif;
+  font-size: max(1.40859375vw, 2.5vh);
+  font-weight: 300;
+  line-height: 2;
+}
+
+#confirmationMessage {
+  color: transparent;
+  font-weight: 400;
+  user-select: none;
+}
+
+#contactForm {
+  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formSmallInput {
+  background: transparent;
+  border: 0.375vh solid #06617a;
+  width: 75%;
+  aspect-ratio: 13;
+  padding-left: 2.5%;
+  font-family: "Urbanist", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: calc((0.4 / 8) * 50vw * (1 / 2));
+  outline: none;
+}
+
+#formMessageInput {
+  aspect-ratio: calc(7.5 / 2.25);
+  resize: none;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.formSmallInput::placeholder {
+  color: #06617a;
+}
+
+#contactSubmit {
+  width: 20%;
+  aspect-ratio: 3.5;
+  background: #dbf6fd;
+  border: 0.375vh solid #06617a;
+  border-radius: calc(0.2 * 50vw * 0.1);
+  font-family: codefont;
+  font-size: calc(0.2 * 50vw / 8);
+  font-weight: 400;
+  color: #06617a;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media screen and (min-height: 100vw) {
+  #contactContainer {
+    flex-direction: column;
+  }
+  .contactFormStrip {
+    width: 100vw;
+    min-height: unset;
+  }
+  #contactPageTitle {
+    font-weight: 300;
+  }
+  .formSmallInput {
+    width: 85vw;
+    aspect-ratio: 7;
+    font-size: calc(85vw / 18);
+  }
+  #contactSubmit {
+    width: 30vw;
+    aspect-ratio: 2.5;
+    font-size: calc(30vw / 7);
+    border-radius: calc(30vw * 0.1);
+  }
+  #confirmationMessage {
+    display: none;
+  }
+}
