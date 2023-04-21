@@ -59,8 +59,7 @@
   }
   .beepBoopContainer {
     width: 75vw;
-    aspect-ratio: 2;
-    height: unset;
+    min-height: 125vw;
     display: flex;
     flex-direction: column;
   }
