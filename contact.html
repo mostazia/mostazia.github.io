@@ -103,18 +103,21 @@
           >
             <input
               class="formSmallInput"
+              id="clear1"
               type="text"
               placeholder="Name*"
               name="entry.1656363160"
             />
             <input
               class="formSmallInput"
+              id="clear2"
               type="text"
               placeholder="Email*"
               name="entry.2124606220"
             />
             <input
               class="formSmallInput"
+              id="clear3"
               type="text"
               placeholder="Subject"
               name="entry.1356158658"
@@ -142,6 +145,10 @@
                 "#8c0461";
               document.getElementById("confirmationMessage").style.display =
                 "block";
+              document.getElementById("clear1").value = null;
+              document.getElementById("clear2").value = null;
+              document.getElementById("clear3").value = null;
+              document.getElementById("formMessageInput").value = null;
             }, 1000); // Adjust the delay as needed
           });
       </script>
