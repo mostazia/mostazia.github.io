@@ -34,7 +34,7 @@ body {
 
 #webpageName {
   margin-top: min(1vh, calc(15vw / 9.5));
-  margin-left: 2vw;
+  margin-left: 5vw;
   font-size: min(5.16375vh, calc(7.65vw * (15 / 12) * (0.9)));
   font-family: namefont;
   font-weight: 200;
