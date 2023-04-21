@@ -198,3 +198,54 @@
     font-size: calc(0.7 * 3.077vh);
   }
 }
+
+@media screen and (min-height: 100vw) {
+  #blogPageBody {
+    padding: 5vw;
+    min-height: calc(100vh - 15vw - 3vh - 4vh - 100vw / 2.75);
+  }
+  #{ blogPagePostsContainer } #blogPageTitle {
+    height: 10vh;
+    width: 100%;
+    margin-top: 2vh;
+    color: #8c0461;
+    font-family: namefont;
+    font-size: 10vw;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .blogPageActionButton {
+    margin-left: auto;
+    margin-right: 0;
+    height: 6vw;
+    aspect-ratio: 3.5;
+    background: #dbf6fd;
+    border: 0.25vh solid #06617a;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    font-family: codefont;
+    color: #06617a;
+    cursor: pointer;
+    user-select: none;
+  }
+  #blogPageSortMenu {
+    width: calc(6vw * 3.5);
+    border-radius: 1.5vh;
+    top: calc(18.25vw + 13vh);
+    left: calc(100vw - (6vw * 7 + 1vh + 6.5vw));
+  }
+  #blogPageFilterMenu {
+    width: calc(6vw * 3.5);
+    border-radius: 1.5vh;
+    top: calc(18.25vw + 13vh);
+    left: calc(100vw - (6vw * 3.5 + 0.5vh + 5vw));
+  }
+  .blogPageDropdownButton {
+    font-size: 3.25vw;
+  }
+}
