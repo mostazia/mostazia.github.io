@@ -218,6 +218,7 @@ body {
   text-align: left;
   line-height: 2.15;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .blogPostContentH2 {
