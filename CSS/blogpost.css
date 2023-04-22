@@ -305,6 +305,10 @@ body {
   font-weight: 400;
 }
 
+.highlightText {
+  background-color: #dbf6fd;
+}
+
 #taskbarStrip {
   width: 100vw;
   aspect-ratio: 3;

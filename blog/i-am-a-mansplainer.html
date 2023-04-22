@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>I am a mansplainer</title>
+    <link rel="stylesheet" href="../CSS/blogpost.css" />
+    <link
+      rel="shortcut icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <script type="text/javascript" src="../JS/footer.js"></script>
+    <script id="footerScript">
+      let footerDropdown = false;
+      const footerDDHandle = (bool) => {
+        if (footerDropdown && !bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (footerDropdown && bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "flex";
+          footerDropdown = true;
+        }
+      };
+    </script>
+    <script>
+      const copyPostLink = () => {
+        navigator.clipboard.writeText(
+          "https://stacyvazquez.com/blog/i-am-a-mansplainer"
+        );
+        alert("Copied link to clipboard!");
+      };
+    </script>
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="mobileMenuPopup">
+      <div id="mobileMenuPopupCloseSection">
+        <div
+          id="mobileMenuPopupCloseButton"
+          onclick="mobileMenuLoad(false)"
+        ></div>
+      </div>
+      <a href="../about" class="mobileMenuPopupText">About</a>
+      <a href="../projects" class="mobileMenuPopupText">Projects</a>
+      <a href="../blog" class="mobileMenuPopupText">Blog</a>
+      <a href="../contact" class="mobileMenuPopupText">Contact</a>
+      <a href="../Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+    </div>
+    <div id="navbar" onclick="footerDDHandle(false)">
+      <a href=".." id="webpageName">Stacy Vazquez</a>
+      <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
+      <div id="menu">
+        <a href="../about" class="menubutton">About</a>
+        <a href="../projects" class="menubutton">Projects</a>
+        <a href="../blog" class="menubutton">Blog</a>
+        <a href="../contact" class="menubutton">Contact</a>
+        <a
+          href="Stacy Resume.pdf"
+          target="_blank"
+          class="menubutton"
+          style="color: #8c0461; font-weight: bold"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+    <div class="blogpostBody" onclick="footerDDHandle(false)">
+      <div class="blogPostContainer">
+        <div class="blogPostWindow">
+          <div class="blogPostInfoMobile">
+            <span>📝: Stacy Vazquez</span> <span>📅: April 22, 2023</span>
+            <span
+              >🔗:
+              <span style="cursor: pointer" onclick="copyPostLink()"
+                >/i-am-a-mansplainer</span
+              >
+            </span>
+          </div>
+          <div class="blogPostInfoMobile" style="justify-content: left">
+            🏷️:
+            <a href="tags/favorites" class="blogPostInfoTag">Favorites</a>
+            <a href="tags/college-applications" class="blogPostInfoTag"
+              >Thoughts</a
+            >
+            <a href="tags/high-school" class="blogPostInfoTag">College</a>
+            <a href="tags/writing" class="blogPostInfoTag">Tutoring</a>
+          </div>
+          <div class="blogPostWindowTopFrame"></div>
+          <div class="blogPostWindowBody">
+            <div class="blogPostTitle">I am a ✨Mansplainer✨</div>
+            <div class="blogPostContent">
+              <span id="aTutor"></span>
+              The world has always valued prediction. Both psychics and
+              financial analysts live on prediction. Their job is to foresee the
+              future, so that we can maximize success and minimize misfortune.
+              As a consequence, humans have developed reliable
+              pattern-identification skills. <br /><br />
+              Everyone knows the classic IQ test question: given a sequence of
+              numbers or illustrations, identify the missing / following item.
+              Nowadays, we train AI to help us predict. As I write this blog
+              post, my handy document editor offers to finish my phrases and
+              sentences. And, I would be lying if I said I didn't find Google
+              autocomplete satisfying. Given sufficient data, we can figure out
+              what to expect.
+              <br /><br />
+              I began tutoring when I was nine and have continued since. Helping
+              multiple classmates with long division, I identified common
+              misconceptions and prepared answers to address them; years later,
+              I still use this approach. So, naturally, I evolved into a
+              mansplainer.
+              <br /><br />
+              <span class="highlightText">Mansplainer</span>&nbsp;[noun,
+              informal; /mænspleɪnɚ/]: a man that explains (usually to a woman)
+              in a patronizing manner. <br /><br />
+              Or, what my friends call it — to spare my feelings — a tutor. Now,
+              before I get canceled, my claim is not that tutors are
+              mansplainers (we love tutors; tutors are very snazzy), but,
+              rather, that my desire for the convenience of predicting sometimes
+              comes at the expense of my students' confidence and understanding.
+              <br /><br />Consider the following scenario: a student asks me to
+              confirm if the surface area of a square is given by 4πr2, and I
+              tell her, “yes because surface area is the derivative of the
+              volume which is 4/3πr3.”<br /><br />Now, for some students
+              providing that explanation might give them insight they hadn't
+              considered before, allowing them to understand the concept rather
+              than rely on a formula. But, some students want to think for
+              themselves. See, when you think about the origin of a math formula
+              you don't just gain an understanding of why the formula holds but
+              also thinking skills that are applicable to more challenging
+              questions. When someone gives you the explanation, you are
+              guaranteed to obtain the former but not the latter. You might
+              learn from the way the tutor thought about the problem and choose
+              to adopt it. But, you lack the reward mechanism, the satisfaction
+              of arriving at a solution. <br /><br />Consider the following
+              scenario: a student asks if a negative number multiplied by a
+              negative number gives a positive, and I reply, “yes, and a
+              negative times a positive gives a negative.”<br /><br />
+              <span id="informationIsHarmless" class="blogPostContentH2"
+                >Claim: a little extra information doesn't hurt anyone…</span
+              >
+              <br /><br />Wrong :( ! At MIT, I discovered that a little extra
+              information isn't as harmless as it seems. When I seek tutoring, I
+              seek a dynamic similar to that of speaking to a colleague; I don't
+              seek to feel inferior to my tutor (perhaps stemming a little bit
+              from my academic ego). So, giving that extra information could
+              make a student feel like the tutor expects they know less than
+              they do. A lot of success in academics comes from confidence.
+              <br /><br />This is where mansplaining comes in. There are times
+              when we want to spare a student some questions, so from our
+              experience, we answer them ahead of time, like the situations
+              above. Additionally, there are times when we feel a student could
+              benefit from thinking about a concept in a certain way because it
+              was helpful for us. So, we provide that information. For example,
+              when a student is learning the unit circle, it's tempting to
+              encourage them to see its foundation in trigonometry ahead of
+              time. All of our brains are wired differently, so projecting our
+              rationale is not always ideal. <br /><br />
+              <span id="independentThinkers" class="blogPostContentH2"
+                >Claim: motivating independent thinking can be fruitful…</span
+              >
+              <br /><br />Maybe! For this claim, I don't have a binary response.
+              This raises a question about teaching that many educators and
+              professionals are working to address. How much information should
+              teachers provide? Are vague, open-ended answers more helpful than
+              direct ones? Would this cause more confusion or frustration? Some
+              students need more hints than others. Some students want more
+              hints than others. This is why I respect teachers immensely. They
+              have to find a strategy that works for a class made up of students
+              with different learning styles, and adapt that strategy as
+              generations change. <br /><br />After COVID, I noticed that a lot
+              of our attention span, as a generation, decreased (I wouldn't be
+              surprised if half of my readers have clicked away by now). We
+              began to gravitate towards Tiktok's fifteen second videos over
+              Youtube's longer videos. And, like many others, I appreciate those
+              moments when I google a question and a short answer appears at the
+              top of the search results in a large font and bolded letters.
+              <br /><br />We have grown up with so much information at our
+              fingertips, that it has become overwhelming. I find that I can
+              only digest so much information at a time. I've even noticed that,
+              when asking for help, I sometimes ask for a pause in which I can
+              process and fully understand the last statement made.
+              <br /><br />So, turns out, a little extra information can be
+              negative. (Not to mention, those last minute clarification
+              questions when a student might ask about negative number
+              multiplication, and after giving that extra bit of information, a
+              student can't properly recall what you said because their brain
+              couldn't register that much in that small timeframe.)<br /><br />
+              <span id="whyMansplaining" class="blogPostContentH2">
+                Question: why call it mansplaining instead of overexplaining?
+              </span>
+              <br /><br />Well, a lot of mansplaining roots from misogyny and
+              prejudice. And, this faulty approach to teaching also stems from
+              prejudice, assuming that a person asking for help inherently knows
+              and understands less. <br /><br />I have observed this trend in
+              fellow MIT classmates, as well. Back home, many of us were the
+              go-to 'tutors'. We answered questions for classmates who were
+              struggling to understand. And, in high school, comprehension is
+              more binary than it is in college. You either know your formulas,
+              or you don't. At MIT, however, that line is very blurred; a
+              student can be one clarification away from mastering a topic. And,
+              at a place like MIT, maintaining confidence in the face of
+              impostor syndrome is key, especially since many students are
+              learning to ask for help for the first time. <br /><br />
+              <span id="theFuture"></span>
+              As I conclude this post, I can't help but recall my reaction to
+              when I was called a mansplainer. As a seventeen year old girl who
+              adored teaching and helping others, 'mansplainer' was the last
+              title I would've expected. But, I've come far since then. Instead
+              of feeling hurt, I acknowledge that my teaching style is not
+              foolproof, and I'm excited to learn more about education.
+              <br /><br />I've always seen pattern-matching as a way to improve.
+              Yet, I now realize that a lot of prejudice roots from people's
+              'reliable' yet still imperfect 'pattern-matching.' Just as we
+              strive to predict, it is also our job to look back and strive to
+              fix our flaws. <br /><br />I have made a lot of claims in this
+              essay. And I would like to warn that a lot of my thoughts are
+              merely a product of observation. I don't have a degree in
+              education, simply experience. So, everything I said in this essay
+              could hold some truth. Or, it could be another example in which
+              human prediction fails. <br /><br />Regardless, I can confidently
+              say that this post is another opportunity to learn.
+            </div>
+          </div>
+          <div class="blogPostWindowBottomFrame"></div>
+        </div>
+        <div class="blogPostRightStrip">
+          <div class="blogPostRightBox">
+            <div class="blogPostRightTitle">Post Info</div>
+            <div class="blogPostRightText">
+              📝: Stacy Vazquez <br />
+              📅: April 22, 2023 <br />
+              🔗:
+              <span style="cursor: pointer" onclick="copyPostLink()"
+                >/i-am-a-mansplainer</span
+              ><br />
+              🏷️:
+              <a href="tags/favorites" class="blogPostInfoTag">Favorites</a>
+              <a href="tags/college-applications" class="blogPostInfoTag"
+                >Thoughts</a
+              >
+              <a href="tags/high-school" class="blogPostInfoTag">College</a>
+              <a href="tags/writing" class="blogPostInfoTag">Tutoring</a>
+            </div>
+          </div>
+          <div class="blogPostRightBox">
+            <div class="blogPostRightTitle">In this post:</div>
+            <div class="blogPostRightText" style="cursor: pointer">
+              <a class="blogPostRightText" href="#aTutor"
+                ><span style="font-weight: 600">1. </span>A Tutor<br
+              /></a>
+              <a class="blogPostRightText" href="#informationIsHarmless">
+                <span style="font-weight: 600">2. </span>Information is
+                Harmless<br
+              /></a>
+              <a class="blogPostRightText" href="#independentThinkers">
+                <span style="font-weight: 600">3. </span>Independent Thinkers<br
+              /></a>
+              <a class="blogPostRightText" href="#whyMansplaining">
+                <span style="font-weight: 600">4. </span>Why Mansplaining?
+                Essay<br
+              /></a>
+              <a class="blogPostRightText" href="#theFuture">
+                <span style="font-weight: 600">5. </span>The Future<br
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blogPostThankYou">Thanks for reading!<br /></div>
+    </div>
+    <div id="footer">
+      <div id="taskbarFolderDropdown">
+        <a href=".." class="taskbarFolderOption">Home</a>
+        <a href="../about" class="taskbarFolderOption">About</a>
+        <a href="../projects" class="taskbarFolderOption">Projects</a>
+        <a href="../blog" class="taskbarFolderOption">Blog</a>
+        <a href="../contact" class="taskbarFolderOption">Contact</a>
+        <a
+          href="../Stacy Resume.pdf"
+          target="_blank"
+          class="taskbarFolderOption"
+          >Resume</a
+        >
+      </div>
+      <div id="taskbarStrip">
+        <a
+          href="https://github.com/mostazia/personal-webpage"
+          target="_blank"
+          class="taskbarText"
+          id="footerMadeBy"
+        >
+          Designed & Built by Stacy Vazquez
+        </a>
+        <div id="taskbarApps">
+          <div
+            onclick="footerDDHandle(true)"
+            id="folderApp"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarFolder.png')"
+          ></div>
+          <a
+            href="mailto:stacyv@mit.edu"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarEmail.png')"
+          ></a>
+          <a
+            href="https://github.com/mostazia"
+            target="_blank"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarGithub.png')"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/stacyvazquez/"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 75%;
+              background-image: url('../Images/TaskbarLinkedin.png');
+            "
+          ></a>
+          <a
+            href="https://open.spotify.com/user/penguin9879?si=8e11d8278fb94675"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('../Images/TaskbarSpotify.png');
+            "
+          ></a>
+          <a
+            href="https://twitter.com/stacyv_"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('../Images/TaskbarTwitter.png');
+            "
+          ></a>
+        </div>
+        <div class="taskbarText" id="lastUp">Last Updated 4/1/2023</div>
+        <script type="text/javascript">
+          document.getElementById("lastUp").innerHTML =
+            "Last updated " + lastUpdated;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
