@@ -25,10 +25,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #contactPageTitle {
-  margin-left: 7.5%;
+  width: 85%;
   color: #8c0461;
   font-family: namefont;
   font-size: 9vh;
@@ -36,7 +37,6 @@
 }
 
 .contactPageText {
-  margin-left: 7.5%;
   margin-top: 3%;
   width: 85%;
   color: #696969;
@@ -53,23 +53,30 @@
 }
 
 #contactForm {
-  min-height: calc(100vh - 9.5vh - 3vh - 4vh - 100vw / 26);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
+  height: 40vw;
+  aspect-ratio: 1;
+  background: url("../Images/ContactFormWindow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: calc(150 / 3000 * 40vw);
 }
 
 .formSmallInput {
   background: transparent;
   border: 0.375vh solid #06617a;
-  width: 75%;
+  width: calc(40vw * 0.8);
   aspect-ratio: 13;
   padding-left: 2.5%;
   font-family: "Urbanist", sans-serif;
   color: black;
   font-weight: 500;
-  font-size: calc((0.4 / 8) * 50vw * (1 / 2));
+  font-size: calc((0.8 / 13) * 40vw * (1 / 2));
   outline: none;
 }
 
@@ -85,13 +92,13 @@
 }
 
 #contactSubmit {
-  width: 20%;
-  aspect-ratio: 3.5;
+  width: calc(0.2 * 40vw);
+  aspect-ratio: 3;
   background: #dbf6fd;
   border: 0.375vh solid #06617a;
-  border-radius: calc(0.2 * 50vw * 0.1);
+  border-radius: calc(0.2 * 40vw * 0.1);
   font-family: codefont;
-  font-size: calc(0.2 * 50vw / 8);
+  font-size: calc(0.2 * 40vw / 7);
   font-weight: 400;
   color: #06617a;
   cursor: pointer;
@@ -106,23 +113,29 @@
     width: 100vw;
     min-height: unset;
   }
+  #contactForm {
+    height: 65vh;
+    width: 100vw;
+    background: transparent;
+    padding-top: unset;
+  }
   #contactPageTitle {
     font-weight: 300;
-    margin-left: 6vw;
-  }
-  .contactPageText {
-    margin-left: 6vw;
+    font-size: 7.5vh;
   }
   .formSmallInput {
     width: 85vw;
     aspect-ratio: 7;
     font-size: calc(85vw / 18);
+    box-sizing: border-box;
+    border: min(0.75vw, 0.5vh) solid #06617a;
   }
   #contactSubmit {
     width: 30vw;
     aspect-ratio: 2.5;
     font-size: calc(30vw / 7);
     border-radius: calc(30vw * 0.1);
+    border: min(0.75vw, 0.5vh) solid #06617a;
   }
   #confirmationMessage {
     display: none;
