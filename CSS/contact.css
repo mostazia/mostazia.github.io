@@ -68,7 +68,7 @@
 }
 
 .formSmallInput {
-  background: transparent;
+  background: white;
   border: 0.375vh solid #06617a;
   width: calc(40vw * 0.8);
   aspect-ratio: 13;
