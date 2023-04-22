@@ -319,7 +319,7 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: 0;
-  margin-bottom: 0;
+  margin-bottom: calc(20vw * 2546 / 2022 - 20vw * 2396 / 2022);
   top: calc((-20vw * 3000 / 2022) + (100vh - 5vw - (20vw * 2546 / 2022)));
   display: flex;
   align-items: end;
@@ -335,6 +335,7 @@ body {
   aspect-ratio: calc(2022 / 3000);
   z-index: 4;
   font-size: calc(12.5vw * 3000 / 2022 - 12.5vw * 2850 / 2022);
+  margin-bottom: 0;
 }
 
 #aboutPageFamilyPic {
