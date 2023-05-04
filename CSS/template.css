@@ -266,7 +266,7 @@ body {
     width: auto;
     aspect-ratio: 7;
   }
-  #taskbarText {
+  .taskbarText {
     font-size: calc(0.5 * 100vw / 52);
     width: 20%;
   }
