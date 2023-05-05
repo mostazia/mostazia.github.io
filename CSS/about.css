@@ -255,6 +255,7 @@ body {
 .aboutPageContainer {
   width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -262,7 +263,7 @@ body {
 
 .aboutPageLeftStrip {
   width: 50%;
-  min-height: 100vh;
+  height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -271,7 +272,7 @@ body {
 
 .aboutPageRightStrip {
   width: 50%;
-  min-height: 100vh;
+  height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
