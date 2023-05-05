@@ -465,7 +465,7 @@ body {
 #blogPreviewsStrip {
   margin-top: 1.5%;
   min-height: 50vh;
-  max-height: 100vh;
+  max-height: 50vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -473,6 +473,7 @@ body {
   box-sizing: border-box;
   padding-left: 2vw;
   padding-right: 2vw;
+  overflow: hidden;
 }
 
 .blogPreviewWindow {
@@ -979,6 +980,10 @@ body {
   #blogStrip {
     margin-top: 10vh;
     min-height: 100vh;
+  }
+  #blogPreviewsStrip {
+    max-height: 100vh;
+    overflow: unset;
   }
   .blogPreviewWindow {
     height: 45vh;
