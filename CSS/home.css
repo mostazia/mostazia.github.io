@@ -82,15 +82,14 @@ body {
 }
 
 #mobileMenuPopup {
-  width: 101vw;
-  height: 100vh;
+  width: 101%;
+  height: 100%;
   background: rgba(6, 97, 122, 0.8);
   display: none;
   flex-direction: column;
   position: fixed;
   z-index: 10;
   overflow-x: hidden;
-  align-items: center;
 }
 
 #mobileMenuPopupCloseSection {
@@ -116,8 +115,9 @@ body {
 }
 
 .mobileMenuPopupText {
-  width: 30%;
+  width: 30vw;
   height: 8vh;
+  margin-left: 35vw;
   display: flex;
   align-items: center;
   justify-content: center;
