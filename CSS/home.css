@@ -207,6 +207,7 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: text;
 }
 
 #helloTerminalText {
@@ -226,7 +227,7 @@ body {
   padding-left: -2.5%;
   opacity: 0;
   animation-name: TerminalCursorAnim;
-  animation-delay: 5s;
+  animation-delay: 8.5s;
   animation-duration: 1s;
   animation-iteration-count: 4;
 }
@@ -695,6 +696,32 @@ body {
   width: 100vw;
 }
 
+#introAnimationMainDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fde1e0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loadingAnim;
+  animation-duration: 3.4s;
+  opacity: 0;
+}
+
+#introAnimationGifContainer {
+  height: 15vh;
+  aspect-ratio: calc(600 / 463);
+  background: url("../Images/LogoAnimation.gif");
+  background-size: contain;
+  z-index: -1;
+  display: flex;
+  animation: loadingAnim;
+  animation-duration: 3.4s;
+  opacity: 0;
+}
+
 .heading1 {
   margin-left: 5%;
   color: #8c0461;
@@ -738,6 +765,21 @@ body {
   color: #06617a;
 }
 
+@keyframes loadingAnim {
+  0% {
+    opacity: 100;
+    z-index: 15;
+  }
+  58.5% {
+    opacity: 100;
+    z-index: 15;
+  }
+  100% {
+    opacity: 0;
+    z-index: 15;
+  }
+}
+
 @keyframes TerminalCursorAnim {
   0% {
     opacity: 100;
@@ -757,7 +799,10 @@ body {
   0% {
     opacity: 0;
   }
-  10% {
+  25.95% {
+    opacity: 0;
+  }
+  33.333% {
     opacity: 100;
   }
   100% {
@@ -769,11 +814,11 @@ body {
   0% {
     opacity: 0;
   }
-  10% {
+  33.333% {
     opacity: 0;
   }
 
-  20% {
+  40.74% {
     opacity: 100;
   }
   100% {
@@ -785,10 +830,10 @@ body {
   0% {
     opacity: 0;
   }
-  20% {
+  40.74% {
     opacity: 0;
   }
-  30% {
+  48.14% {
     opacity: 100;
   }
   100% {
@@ -800,10 +845,10 @@ body {
   0% {
     opacity: 0;
   }
-  30% {
+  48.14% {
     opacity: 0;
   }
-  40% {
+  55.54% {
     opacity: 100;
   }
   100% {
@@ -815,10 +860,10 @@ body {
   0% {
     opacity: 0;
   }
-  40% {
+  55.54% {
     opacity: 0;
   }
-  50% {
+  62.94% {
     opacity: 100;
   }
   100% {
@@ -830,10 +875,10 @@ body {
   0% {
     opacity: 0;
   }
-  50% {
+  62.94% {
     opacity: 0;
   }
-  60% {
+  70.34% {
     opacity: 100;
   }
   100% {
@@ -845,10 +890,10 @@ body {
   0% {
     opacity: 0;
   }
-  60% {
+  70.34% {
     opacity: 0;
   }
-  70% {
+  77.74% {
     opacity: 100;
   }
   100% {
@@ -860,10 +905,10 @@ body {
   0% {
     opacity: 0;
   }
-  70% {
+  77.74% {
     opacity: 0;
   }
-  80% {
+  85.14% {
     opacity: 100;
   }
   100% {
@@ -875,10 +920,10 @@ body {
   0% {
     opacity: 0;
   }
-  80% {
+  85.14% {
     opacity: 0;
   }
-  90% {
+  92.54% {
     opacity: 100;
   }
   100% {
@@ -890,7 +935,7 @@ body {
   0% {
     opacity: 0;
   }
-  90% {
+  92.54% {
     opacity: 0;
   }
   100% {
