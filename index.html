@@ -155,12 +155,15 @@
       };
     </script>
     <script id="introAnimCode">
-      var timestamp = Date.now();
-      var versionNumber = timestamp.toString();
-      var cssCode = document.styleSheets[0].cssRules[0].cssText;
-      cssCode = cssCode.replace("VERSION_PLACEHOLDER", versionNumber);
-      document.styleSheets[0].deleteRule(0);
-      document.styleSheets[0].insertRule(cssCode, 0);
+      var versionNumber = new Date().getTime().toString();
+      var styleTag = document.createElement("style");
+      styleTag.appendChild(document.createTextNode(""));
+      document.head.appendChild(styleTag);
+      var cssCode =
+        "#myElement { background: url('../Images/LogoAnimation.gif?v=" +
+        versionNumber +
+        "'); }";
+      styleElement.sheet.insertRule(cssCode, 0);
     </script>
   </head>
   <body>
