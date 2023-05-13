@@ -154,18 +154,6 @@
         });
       };
     </script>
-    <script id="introAnimCode">
-      var versionNumber = new Date().getTime().toString();
-      var cssCode =
-        "#myElement { background: url('../Images/LogoAnimation.gif?v=" +
-        versionNumber +
-        "'); }";
-
-      var styleElement = document.createElement("style");
-      styleElement.appendChild(document.createTextNode(cssCode));
-
-      document.head.appendChild(styleElement);
-    </script>
   </head>
   <body>
     <div id="introAnimationMainDiv">
