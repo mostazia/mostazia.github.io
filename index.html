@@ -156,14 +156,15 @@
     </script>
     <script id="introAnimCode">
       var versionNumber = new Date().getTime().toString();
-      var styleTag = document.createElement("style");
-      styleTag.appendChild(document.createTextNode(""));
-      document.head.appendChild(styleTag);
       var cssCode =
         "#myElement { background: url('../Images/LogoAnimation.gif?v=" +
         versionNumber +
         "'); }";
-      styleElement.sheet.insertRule(cssCode, 0);
+
+      var styleElement = document.createElement("style");
+      styleElement.appendChild(document.createTextNode(cssCode));
+
+      document.head.appendChild(styleElement);
     </script>
   </head>
   <body>
