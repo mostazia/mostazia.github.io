@@ -713,7 +713,7 @@ body {
 #introAnimationGifContainer {
   height: 15vh;
   aspect-ratio: calc(600 / 463);
-  background: url("../Images/LogoAnimation.gif");
+  background: url("../Images/LogoAnimation.gif?v=VERSION_PLACEHOLDER");
   background-size: contain;
   z-index: -1;
   display: flex;
