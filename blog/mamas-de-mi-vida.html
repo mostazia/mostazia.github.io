@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Para las mamás de mi vida</title>
+    <link rel="stylesheet" href="../CSS/blogpost.css" />
+    <link
+      rel="shortcut icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://media.discordapp.net/attachments/960382224870547456/1091179585846128730/Favicon.png?width=165&height=165"
+      type="image/x-icon"
+    />
+    <script type="text/javascript" src="../JS/footer.js"></script>
+    <script id="footerScript">
+      let footerDropdown = false;
+      const footerDDHandle = (bool) => {
+        if (footerDropdown && !bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (footerDropdown && bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "none";
+          footerDropdown = false;
+        } else if (bool) {
+          document.getElementById("taskbarFolderDropdown").style.display =
+            "flex";
+          footerDropdown = true;
+        }
+      };
+    </script>
+    <script>
+      const copyPostLink = () => {
+        navigator.clipboard.writeText(
+          "https://stacyvazquez.com/blog/mamas-de-mi-vida"
+        );
+        alert("Copied link to clipboard!");
+      };
+    </script>
+    <script id="navbarScriptMobile">
+      const mobileMenuLoad = (bool) => {
+        if (bool) {
+          document.getElementById("mobileMenuPopup").style.display = "flex";
+        } else {
+          document.getElementById("mobileMenuPopup").style.display = "none";
+        }
+      };
+    </script>
+    <script id="languageScript">
+      const selectLanguage = (language) => {
+        if (language === "English") {
+          document.getElementById("englishContent").style.display = "inline";
+          document.getElementById("rightBoxEng").style.display = "block";
+          document.getElementById("spanishContent").style.display = "none";
+          document.getElementById("rightBoxSpan").style.display = "none";
+        } else {
+          document.getElementById("englishContent").style.display = "none";
+          document.getElementById("rightBoxEng").style.display = "none";
+          document.getElementById("spanishContent").style.display = "inline";
+          document.getElementById("rightBoxSpan").style.display = "block";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="mobileMenuPopup">
+      <div id="mobileMenuPopupCloseSection">
+        <div
+          id="mobileMenuPopupCloseButton"
+          onclick="mobileMenuLoad(false)"
+        ></div>
+      </div>
+      <a href="../about" class="mobileMenuPopupText">About</a>
+      <a href="../projects" class="mobileMenuPopupText">Projects</a>
+      <a href="../blog" class="mobileMenuPopupText">Blog</a>
+      <a href="../contact" class="mobileMenuPopupText">Contact</a>
+      <a href="../Stacy Resume.pdf" class="mobileMenuPopupText">Resume</a>
+    </div>
+    <div id="navbar" onclick="footerDDHandle(false)">
+      <a href=".." id="webpageName">Stacy Vazquez</a>
+      <div id="mobileMenu" onclick="mobileMenuLoad(true)"></div>
+      <div id="menu">
+        <a href="../about" class="menubutton">About</a>
+        <a href="../projects" class="menubutton">Projects</a>
+        <a href="../blog" class="menubutton">Blog</a>
+        <a href="../contact" class="menubutton">Contact</a>
+        <a
+          href="Stacy Resume.pdf"
+          target="_blank"
+          class="menubutton"
+          style="color: #8c0461; font-weight: bold"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+    <div class="blogpostBody" onclick="footerDDHandle(false)">
+      <div class="blogPostContainer">
+        <div class="blogPostWindow">
+          <div class="blogPostInfoMobile">
+            <span>📝: Stacy Vazquez</span> <span>📅: May 13, 2023</span>
+            <span
+              >🔗:
+              <span style="cursor: pointer" onclick="copyPostLink()"
+                >/mamas-de-mi-vida</span
+              >
+            </span>
+          </div>
+          <div class="blogPostInfoMobile" style="justify-content: left">
+            🏷️:
+            <a href="tags/thoughts" class="blogPostInfoTag">Thoughts</a>
+          </div>
+          <div class="blogPostWindowTopFrame"></div>
+          <div class="blogPostWindowBody">
+            <div class="blogPostTitle">Para las Mamás de mi Vida</div>
+            <div class="blogPostContent">
+              <span
+                id="introduction"
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  background-color: #dbf6fd;
+                  border-radius: 3vh;
+                "
+                ><span>🌎 Language: </span>
+                <span
+                  style="color: #06617a; font-weight: 600; cursor: pointer"
+                  onclick="selectLanguage('English')"
+                  >English</span
+                ><span
+                  style="color: #06617a; font-weight: 600; cursor: pointer"
+                  onclick="selectLanguage('Spanish')"
+                  >Spanish</span
+                ></span
+              >
+              <br />
+              <span id="englishContent">
+                How did we become the people we are today? There is a
+                longstanding debate over whether it is nature or nurture that
+                has a greater impact on our personalities, aspirations, and
+                thoughts. Our parents, though, influence both. <br /><br />I
+                grew up in a family powered by women, and I had the privilege of
+                being raised by multiple maternal figures who, together, helped
+                form the Stacy I am today. I was only two years old when I began
+                to hear my family's “motto”. As a single mother, my mom
+                continuously empowered me and encouraged me to be a confident
+                young girl. The exchange went the following way:<br /><br /><i
+                  class="highlightText"
+                  style="float: left"
+                  >“What are the women in our family like?”</i
+                ><br /><br /><i style="float: right" class="highlightText"
+                  >“Brave, successful, and tough” </i
+                ><br /><br />This was how I learned to manifest. Whenever I was
+                feeling down or doubting myself, my mom would ask the question,
+                reminding me of my potential. <br /><br />This is the first
+                mother's day I spend away from home. And, today, I feel more
+                grateful than ever for the mothers in my life. So, I would like
+                to channel the love and appreciation I have for them in this
+                post. <br /><br /><span class="blogPostContentH2" id="mama1"
+                  >Mamá</span
+                >
+                <br />My mom is the most loving and giving person I will ever
+                know. Her selflessness extends to the point that she was willing
+                to abandon a comfortable job and the country she knew to seek
+                better opportunities for her children, whom she wouldn't meet
+                until years later. And, when she settled down, she helped the
+                rest of our family make a better life for themselves. Thanks to
+                her bravery, I am able to write this post all the way from
+                Cambridge, at one of the best universities in the world.<br /><br />Many
+                mothers live for their children, but I can't imagine anyone
+                embodying that philosophy more than my mom. From bringing me
+                endless snacks during virtual learning to driving for hours so
+                that I could attend conferences to staying up with me on busy
+                school nights, my mother has been the biggest pillar of my
+                education. She always went above and beyond to help in any way
+                she could. <br /><br />She taught me how to give. During my
+                senior year of high school, I witnessed her give her mind and
+                body to take care of my sick grandmother in her end-of-life
+                stage. Whenever she wasn't with me, she was with her, keeping
+                her as comfortable as possible. She powered through her
+                tiredness because to her, family was above everything.
+                <br /><br />I can only aspire to be half as good of a woman as
+                she was. And, despite being thousands of miles apart, she
+                continues to inspire me to be braver and kinder.
+                <br /><br /><span class="blogPostContentH2" id="hermana1"
+                  >Hermana</span
+                ><br />Turns out that closeness in age is not the best predictor
+                of emotional closeness for siblings. The twelve years between us
+                allowed me to have a sister and a second mother. All of our
+                memories range from binge-watching RBD concerts with her and
+                singing our hearts out to her holding my hand as I retrieved my
+                hundredth lost item from my elementary school's lost and found.
+                <br /><br />My sister taught me the definition of true joy.
+                Looking back, I was probably the cringiest five-year-old to
+                exist. Yet, that didn't stop my sister from laughing at my
+                terrible jokes and backing me up on my silly ideas.
+                <br /><br />My sister is both my partner in crime and my role
+                model. If there's anyone in the world I can count on, it's her.
+                In her, I don't only have someone to laugh with but someone to
+                confide in. <br /><br />She is the reason I smile a little
+                brighter and am inspired to work a little harder.<br /><br /><span
+                  class="blogPostContentH2"
+                  id="abuelita1"
+                  >Abuelita</span
+                ><br />I was my grandma's youngest grandchild. And though I
+                didn't get to know her when she was the healthiest. I knew her
+                when she was the strongest. <br /><br />My grandmother taught me
+                to never give up. In every phase of her life, she was able to
+                adapt, start over, and show the world what a strong woman she
+                was. <br /><br />Life truly comes full circle. I have video
+                tapes of her feeding me my cereal when I was baby. And, a few
+                months ago, I had the honor of helping her with her meals.
+                <br /><br />Despite being with her in the last months of her
+                life, I never saw her weak. Even when she was confined to a bed,
+                she never forgot how to sing or how to laugh. And, it was during
+                those months that I learned that a person's power is not
+                determined by the health of their body or their mind, but rather
+                by the legacy they leave behind. <br /><br />My grandma raised a
+                family of strong, independent women. And, she continues to live.
+                She lives in the memories she left behind and in the lessons she
+                taught us all. She lives every moment I stand back up after
+                experiencing failure. And, she lives every instance that we
+                choose not to give up. <br /><br />My grandmother is the reason
+                I am strong. <br /><br /><span
+                  class="blogPostContentH2"
+                  id="tia1"
+                  >Tía </span
+                ><br />Last but not least, I was also lucky enough to grow up
+                with my aunt around. She taught me to be unapologetically
+                myself. She taught me how to jump rope, showed me how to make a
+                horse (using only a sock and a broom!), and helped me stay in
+                touch with roots. I will never forget the secret Tampico and
+                chicharrón servings. <br /><br />Her influence allowed my
+                personality to flourish, with a side effect of making me
+                slightly high maintenance. And, though I know how difficult it
+                must've been to keep up with my energy, I'm grateful that she
+                did. Thanks to her, I'm not afraid to be myself. <br /><br />
+                <span id="conclusion1"></span>
+                It is through the endless support of four amazing women that
+                I've made it as far as I have. Though I am still learning and
+                growing, I am beyond fortunate to have a group of women that
+                model selflessness, happiness, strength, and confidence.
+                <br /><br />This short mother's day blog post does not suffice
+                to express the influence and impact that they have had in my
+                life. These past eighteen years with them are priceless. But, I
+                hope to continue showing them my gratitude, not only through
+                writing, but through the woman that I aspire to be; for their
+                legacy will always live in my heart and in my story.
+              </span>
+              <span id="spanishContent" style="display: none"
+                >¿Cómo nos convertimos en las personas que somos hoy? Hay un
+                largo debate sobre si es la naturaleza o la crianza lo que tiene
+                mayor impacto en nuestras personalidades, aspiraciones, y
+                pensamientos. Pero, son nuestros padres quienes influyen en
+                ambas. <br /><br />Yo crecí en una familia impulsada por
+                mujeres, y tuve el privilegio de crecer con varias figuras
+                maternas quienes, juntas, formaron la Stacy que soy hoy en día.
+                Tenía tan solo dos años cuando empecé a escuchar el “himno de
+                batalla” de mi familia. Como mamá soltera, mi madre siempre me
+                empoderó y me animó a ser una joven segura de sí misma. El
+                famoso “himno” es algo así… <br /><br /><span
+                  style="float: left"
+                  class="highlightText"
+                  >“¿Cómo somos las mujeres de la familia?”</span
+                ><br /><br /><span style="float: right" class="highlightText"
+                  >“Valientes, exitosas, y fuertes”</span
+                ><br /><br />Así aprendí a “manifestar”. Siempre que me sentía
+                triste o dudaba de mi misma, mi mamá me hacía esa pregunta y me
+                recordaba de mi potencial. <br /><br />Hoy es el primer día de
+                las madres que paso lejos de casa, y, hoy, me siento más
+                agradecida que nunca por las mamás de mi vida. Por lo tanto, me
+                gustaría escribir sobre todo el amor y la apreciación que siento
+                por ellas. <br /><br /><span
+                  class="blogPostContentH2"
+                  id="mama2"
+                  >Mamá </span
+                ><br />Mi mamá es la persona más amorosa y generosa que conoceré
+                en mi vida. Su amor la llevó a dejar un buen trabajo y el país
+                que conocía para poder buscar mejores oportunidades para sus
+                hijas, quienes no conocería hasta años después. Y, cuando se
+                estableció, ayudó al resto de la familia a, también, a crear una
+                vida mejor. Gracias a su valor, puedo escribir esta publicación
+                desde Cambridge, en una de las mejores universidades del mundo.
+                <br /><br />Muchas madres viven por sus hijos, dudo que haya
+                alguien que viva esa filosofía más que mi mamá. Desde traerme
+                comida durante las clases virtuales, hasta manejar por horas
+                para que yo pudiera atender una conferencia, hasta desvelarse
+                conmigo en noches escolares pesadas, mi mamá ha sido el pilar
+                más importante de mi educación. Ella siempre hizo todo lo
+                posible para apoyarme. <br /><br />Ella me enseñó a ser
+                generosa. Durante mi último año de la preparatoria, vi como dió
+                todo por cuidar a mi abuela en su etapa final. Cuando no se
+                encontraba ayudándome, ella estaba con mi abuela, ayudándola a
+                sentirse lo más cómoda posible. No dejó que su cansancio la
+                detuviera porque, para ella, la familia estaba sobre todo.
+                <br /><br />Solo puedo aspirar a ser un poco de la gran mujer
+                que es ella. Y, aunque estamos a miles de kilómetros de
+                distancia, ella continúa a inspirarme a ser más valiente y más
+                bondadosa. <br /><br /><span
+                  class="blogPostContentH2"
+                  id="hermana2"
+                  >Hermana</span
+                ><br />Resulta que la cercanía en edad no es un buen predictor
+                para la cercanía emocional de las hermanas. Los doce años que no
+                separan me dieron la oportunidad de tener una hermana y una
+                segunda mamá. Nuestros recuerdos son numerosos: desde ver
+                conciertos de RBD juntas y cantar a todo pulmón, hasta cuando
+                ella me acompañaba de la mano a buscar todo lo que perdía en la
+                primaria. <br /><br />Mi hermana me mostró lo que es la
+                verdadera alegría. En retrospectiva, creo que yo era la niña de
+                cinco años más extraña en existir. Pero eso no la detuvo de
+                reírse cuando yo contaba un chiste terrible o de apoyarme en mis
+                ideas absurdas. <br /><br />Mi hermana es mi mejor amiga y mi
+                modelo a seguir. Si hay alguien en el mundo con quien puedo
+                contar, es ella. En ella no solo encuentro con quien reírme sino
+                también en quien confiar. <br /><br />Ella es la razón por la
+                cual sonrío un poco más y me siento inspirada a echarle más
+                ganas. <br /><br /><span
+                  class="blogPostContentH2"
+                  id="abuelita2"
+                  >Abuelita</span
+                ><br />Yo soy la nieta más pequeña. Y, aunque no conocí a mi
+                abuela cuando fue lo más sana, la conocí cuando fue lo más
+                fuerte. <br /><br />Mi abuela me enseñó a nunca rendirme. En
+                cada fase de su vida, ella pudo adaptarse, empezar desde cero, y
+                mostrarle al mundo lo fuerte que era. <br /><br />La vida
+                realmente es un ciclo. Tengo casettes en los cuales ella me daba
+                de comer cuando era bebé. Y, hace unos meses, tuve el privilegio
+                de ayudarla con sus alimentos. <br /><br />Aunque la vi en sus
+                últimos meses de vida, nunca la vi débil. Hasta cuando se quedó
+                permanentemente en cama, ella nunca dejó de cantar y reír.
+                Durante estos meses aprendí que el poder de una persona no se
+                encuentra en la salud de su cuerpo o de su mente, sino en el
+                legado que dejan. <br /><br />Mi abuela creó una familia de
+                mujeres fuertes e independientes. Y ella vive. Ella vive en los
+                recuerdos que nos dejó y las lecciones que nos enseñó. Ella vive
+                cada momento que me levanto tras un fracaso. Y, ella vive en
+                cada instante que decidimos no rendirnos. <br /><br />Mi
+                abuelita es la razón por la cual soy fuerte. <br /><br /><span
+                  class="blogPostContentH2"
+                  id="tia2"
+                  >Tía </span
+                ><br />También, tuve la suerte de crecer cerca de mi Tía. Ella
+                me enseñó a ser yo misma. Me enseñó a saltar la cuerda, me
+                mostró cómo crear un caballo (¡usando un calcetín y una
+                escoba!), y me ayudó a conocer mis raíces. Nunca olvidaré las
+                probaditas secretas de Tampico y chicharrón. <br /><br />Su
+                influencia ayudó a que mi personalidad floreciera (con el efecto
+                secundario de convertirme de alto mantenimiento). Sé lo difícil
+                que fue seguirme con mi energía, pero agradezco que lo hizo.
+                <br /><br />Gracias a ella, no temo ser yo misma. <br /><br />
+                <span id="conclusion2"></span>
+                Es gracias al gran apoyo de estas cuatro mujeres increíbles que
+                he llegado tan lejos. Aunque sigo aprendiendo y creciendo, soy
+                afortunada de tener un grupo de mujeres que muestran
+                generosidad, alegría, fortaleza y seguridad. <br /><br />Esta
+                publicación corta del día de las madres no es suficiente para
+                expresar todo la influencia que han tenido en mi vida. Estos
+                dieciocho años que he tenido con ellas no tienen precio. Pero,
+                espero mostrarles mi agradecimiento no solo en escritura, sino
+                también en la mujer en la cual espero convertirme; su legado
+                siempre vivirá en mi corazón y en mi historia.
+              </span>
+            </div>
+          </div>
+          <div class="blogPostWindowBottomFrame"></div>
+        </div>
+        <div class="blogPostRightStrip">
+          <div class="blogPostRightBox">
+            <div class="blogPostRightTitle">Post Info</div>
+            <div class="blogPostRightText">
+              📝: Stacy Vazquez <br />
+              📅: May 13, 2023 <br />
+              🔗:
+              <span style="cursor: pointer" onclick="copyPostLink()"
+                >/mamas-de-mi-vida</span
+              ><br />
+              🏷️:
+              <a href="tags/thoughts" class="blogPostInfoTag">Thoughts</a>
+            </div>
+          </div>
+          <div id="rightBoxEng" class="blogPostRightBox">
+            <div class="blogPostRightTitle">In this post:</div>
+            <div class="blogPostRightText" style="cursor: pointer">
+              <a class="blogPostRightText" href="#introduction"
+                ><span style="font-weight: 600">1. </span>Introduction<br
+              /></a>
+              <a class="blogPostRightText" href="#mama1">
+                <span style="font-weight: 600">2. </span>Mamá<br
+              /></a>
+              <a class="blogPostRightText" href="#hermana1">
+                <span style="font-weight: 600">3. </span>Hermana<br
+              /></a>
+              <a class="blogPostRightText" href="#abuelita1">
+                <span style="font-weight: 600">4. </span>Abuelita<br
+              /></a>
+              <a class="blogPostRightText" href="#tia1">
+                <span style="font-weight: 600">5. </span>Tía<br
+              /></a>
+              <a class="blogPostRightText" href="#conclusion1">
+                <span style="font-weight: 600">6. </span>Conclusion<br
+              /></a>
+            </div>
+          </div>
+          <div id="rightBoxSpan" style="display: none" class="blogPostRightBox">
+            <div class="blogPostRightTitle">En esta publicación:</div>
+            <div class="blogPostRightText" style="cursor: pointer">
+              <a class="blogPostRightText" href="#introduction"
+                ><span style="font-weight: 600">1. </span>Introduction<br
+              /></a>
+              <a class="blogPostRightText" href="#mama2">
+                <span style="font-weight: 600">2. </span>Mamá<br
+              /></a>
+              <a class="blogPostRightText" href="#hermana2">
+                <span style="font-weight: 600">3. </span>Hermana<br
+              /></a>
+              <a class="blogPostRightText" href="#abuelita2">
+                <span style="font-weight: 600">4. </span>Abuelita<br
+              /></a>
+              <a class="blogPostRightText" href="#tia2">
+                <span style="font-weight: 600">5. </span>Tía<br
+              /></a>
+              <a class="blogPostRightText" href="#conclusion2">
+                <span style="font-weight: 600">6. </span>Conclusión<br
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blogPostThankYou">¡Feliz Día de las Madres!<br /></div>
+    </div>
+    <div id="footer">
+      <div id="taskbarFolderDropdown">
+        <a href=".." class="taskbarFolderOption">Home</a>
+        <a href="../about" class="taskbarFolderOption">About</a>
+        <a href="../projects" class="taskbarFolderOption">Projects</a>
+        <a href="../blog" class="taskbarFolderOption">Blog</a>
+        <a href="../contact" class="taskbarFolderOption">Contact</a>
+        <a
+          href="../Stacy Resume.pdf"
+          target="_blank"
+          class="taskbarFolderOption"
+          >Resume</a
+        >
+      </div>
+      <div id="taskbarStrip">
+        <a
+          href="https://github.com/mostazia/personal-webpage"
+          target="_blank"
+          class="taskbarText"
+          id="footerMadeBy"
+        >
+          Designed & Built by Stacy Vazquez
+        </a>
+        <div id="taskbarApps">
+          <div
+            onclick="footerDDHandle(true)"
+            id="folderApp"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarFolder.png')"
+          ></div>
+          <a
+            href="mailto:stacyv@mit.edu"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarEmail.png')"
+          ></a>
+          <a
+            href="https://github.com/mostazia"
+            target="_blank"
+            class="taskbarApp"
+            style="background-image: url('../Images/TaskbarGithub.png')"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/stacyvazquez/"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 75%;
+              background-image: url('../Images/TaskbarLinkedin.png');
+            "
+          ></a>
+          <a
+            href="https://open.spotify.com/user/penguin9879?si=8e11d8278fb94675"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('../Images/TaskbarSpotify.png');
+            "
+          ></a>
+          <a
+            href="https://twitter.com/stacyv_"
+            target="_blank"
+            class="taskbarApp"
+            style="
+              height: 70%;
+              background-image: url('../Images/TaskbarTwitter.png');
+            "
+          ></a>
+        </div>
+        <div class="taskbarText" id="lastUp">Last Updated 4/1/2023</div>
+        <script type="text/javascript">
+          document.getElementById("lastUp").innerHTML =
+            "Last updated " + lastUpdated;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
