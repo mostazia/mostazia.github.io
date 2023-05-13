@@ -19,6 +19,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: overlay;
+  animation: loadingOverflowAnim;
+  animation-duration: 3.5s;
+  animation-iteration-count: 1;
   overflow-x: hidden;
 }
 
@@ -777,6 +780,18 @@ body {
   100% {
     opacity: 0;
     z-index: 15;
+  }
+}
+
+@keyframes loadingOverflowAnim {
+  0% {
+    overflow: hidden;
+  }
+  99.999% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: overlay;
   }
 }
 
