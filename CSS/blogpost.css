@@ -168,7 +168,7 @@ body {
   width: 100%;
   aspect-ratio: 20;
   background: url("../Images/BlogPostWindowTop.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 5%;
@@ -178,7 +178,7 @@ body {
   width: 100%;
   aspect-ratio: 20;
   background: url("../Images/BlogPostWindowBottom.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 5%;
@@ -217,7 +217,6 @@ body {
   padding-right: 5%;
   text-align: left;
   line-height: 2.15;
-  user-select: none;
   -webkit-user-select: none;
 }
 
