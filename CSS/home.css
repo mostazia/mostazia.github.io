@@ -716,7 +716,7 @@ body {
 #introAnimationGifContainer {
   height: 15vh;
   aspect-ratio: calc(600 / 463);
-  background: url("../Images/LogoAnimation.gif?v=VERSION_PLACEHOLDER");
+  background: url("../Images/LogoAnimation.gif");
   background-size: contain;
   z-index: -1;
   display: flex;
@@ -786,12 +786,15 @@ body {
 @keyframes loadingOverflowAnim {
   0% {
     overflow: hidden;
+    max-height: 100vh;
   }
   99.999% {
     overflow: hidden;
+    max-height: 100vh;
   }
   100% {
     overflow: overlay;
+    max-height: unset;
   }
 }
 
