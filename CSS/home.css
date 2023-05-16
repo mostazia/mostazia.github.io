@@ -10,6 +10,10 @@
   src: url(../Fonts/CascadiaCode.ttf);
 }
 
+:root {
+  --safari-height: env(safe-area-inset-top);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -787,13 +791,13 @@ body {
 @keyframes loadingOverflowAnim {
   0% {
     overflow: hidden;
-    height: calc(100vh - constant(safe-area-inset-top));
-    max-height: calc(100vh - constant(safe-area-inset-top));
+    height: calc(100vh - var(--safari-height));
+    max-height: calc(100vh - var(--safari-height));
   }
   99.999% {
     overflow: hidden;
-    height: calc(100vh - constant(safe-area-inset-top));
-    max-height: calc(100vh - constant(safe-area-inset-top));
+    height: calc(100vh - var(--safari-height));
+    max-height: calc(100vh - var(--safari-height));
   }
   100% {
     overflow: overlay;
