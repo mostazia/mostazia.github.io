@@ -14,6 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   background-color: #fde1e0;
   margin: 0;
@@ -786,14 +787,17 @@ body {
 @keyframes loadingOverflowAnim {
   0% {
     overflow: hidden;
+    height: 100vh;
     max-height: 100vh;
   }
   99.999% {
     overflow: hidden;
+    height: 100vh;
     max-height: 100vh;
   }
   100% {
     overflow: overlay;
+    height: unset;
     max-height: unset;
   }
 }
