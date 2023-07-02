@@ -1086,7 +1086,7 @@ body {
   }
   .taskbarText {
     font-size: calc(0.5 * 100vw / 52);
-    width: 20vw;
+    width: 20%;
   }
   #folderApp {
     display: unset;
