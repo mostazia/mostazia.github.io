@@ -24,7 +24,7 @@
         }
       };
     </script>
-    <script type="text/javascript" src="JS/footer.js"></script>
+    <script type="text/javascript" src="../../JS/footer.js"></script>
     <script id="footerScript">
       let footerDropdown = false;
       const footerDDHandle = (bool) => {
@@ -57,18 +57,21 @@
           document.getElementById("blogPageFilterMenu").style.display = "none";
         }
       });
+      var currentSort = 1;
       const changeSortOrder = (num) => {
-        if (num === 1) {
-          document.getElementById(
-            "blogPagePostsContainer"
-          ).style.flexDirection = "row";
-          console.log("thing");
-        }
-        if (num === 2) {
-          document.getElementById(
-            "blogPagePostsContainer"
-          ).style.flexDirection = "row-reverse";
-          console.log("stuff");
+        if (num !== currentSort) {
+          if (currentSort === 1) {
+            currentSort = 2;
+          } else {
+            currentSort = 1;
+          }
+          var flexContainer = document.getElementById("blogPagePostsContainer");
+          var childDivs = Array.from(flexContainer.children);
+          childDivs.reverse();
+          flexContainer.innerHTML = "";
+          childDivs.forEach(function (child) {
+            flexContainer.appendChild(child);
+          });
         }
       };
     </script>

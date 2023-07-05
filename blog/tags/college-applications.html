@@ -23,7 +23,7 @@
         }
       };
     </script>
-    <script type="text/javascript" src="JS/footer.js"></script>
+    <script type="text/javascript" src="../../JS/footer.js"></script>
     <script id="footerScript">
       let footerDropdown = false;
       const footerDDHandle = (bool) => {
@@ -56,18 +56,21 @@
           document.getElementById("blogPageFilterMenu").style.display = "none";
         }
       });
+      var currentSort = 1;
       const changeSortOrder = (num) => {
-        if (num === 1) {
-          document.getElementById(
-            "blogPagePostsContainer"
-          ).style.flexDirection = "row";
-          console.log("thing");
-        }
-        if (num === 2) {
-          document.getElementById(
-            "blogPagePostsContainer"
-          ).style.flexDirection = "row-reverse";
-          console.log("stuff");
+        if (num !== currentSort) {
+          if (currentSort === 1) {
+            currentSort = 2;
+          } else {
+            currentSort = 1;
+          }
+          var flexContainer = document.getElementById("blogPagePostsContainer");
+          var childDivs = Array.from(flexContainer.children);
+          childDivs.reverse();
+          flexContainer.innerHTML = "";
+          childDivs.forEach(function (child) {
+            flexContainer.appendChild(child);
+          });
         }
       };
     </script>
@@ -142,6 +145,23 @@
         </div>
       </div>
       <div id="blogPagePostsContainer">
+        <a href="../affirmative-action-outlook" class="blogPreviewWindow">
+          <div class="blogPreviewSheet">
+            <div class="blogPreviewTitle">
+              Job Stealer, Spot Stealer, Dream Stealer: an outlook on
+              Affirmative Action...
+            </div>
+            <div class="blogPreviewDescription">
+              In the twenties, while some enjoyed their fortunes and lavish
+              lifestyles, others discovered that the American Dream extended
+              beyond financial success...
+            </div>
+            <div class="blogPreviewDateReadmore">
+              <div class="blogPreviewDate">7/2/2023</div>
+              <div class="blogPreviewRM">Read More</div>
+            </div>
+          </div>
+        </a>
         <a href="../my-college-essays" class="blogPreviewWindow">
           <div class="blogPreviewSheet">
             <div class="blogPreviewTitle">My College Essays</div>
