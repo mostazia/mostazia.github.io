@@ -288,6 +288,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   border-radius: calc(25vw / 40);
+  white-space: nowrap;
 }
 
 .blogPostThankYou {
