@@ -408,7 +408,7 @@ body {
 
 @media screen and (min-height: 100vw) {
   .blogPostContent {
-    font-size: 1.75vh;
+    font-size: 3.25vw;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
